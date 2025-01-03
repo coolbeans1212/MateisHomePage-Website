@@ -43,7 +43,7 @@ if ($_GET['id']) {
   $stmt->execute();
   $blogs = $stmt->get_result();
   $blogs = $blogs->fetch_assoc();
-  echo '<div class="appletContainer"><a><button class="navigationButton">Previous</button></a> <button class="navigationButton">Next</button></div><hr style="width: 0px;">';
+  echo '<div class="appletContainer"><a href="?id=' . ($_GET['id'] - 1) . '"><button class="navigationButton">Previous</button></a> <a href="?id=' . ($_GET['id'] + 1) . '"><button class="navigationButton">Next</button></div></a><hr style="width: 0px;">';
   if ($blogs['visibility'] == 'public' || ($blogs['visibility'] == 'admin' && $user['admin'] == 1)) {
     echo '<div class="longApplet">' . '<oblique>#' . $blogs['id'] . ', published ' . $blogs['date'] . '</oblique>' . '<h2>' . $blogs['title'] . '</h2>' . '<p>' . $blogs['body'] . '</p>' . '</div><br>';
   } else {
