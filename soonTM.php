@@ -34,7 +34,7 @@ if ( window !== window.parent )
 include_once __DIR__ . "/applets/navigation_bar.php"; // :3
 ?>
 <br>
-<div class="mediumApplet">
+<div class="mediumApplet" style="margin:auto;">
     <h1>Coming soon!</h1>
     This hasn't been made yet, but I'm working on it! (trust me)
 </div>
