@@ -35,6 +35,10 @@ if ( window !== window.parent )
       //window.location.replace("about:inducebrowsercrashforrealz"); // EVIL The page is in an iframe
 
 }
+
+if (window.location.href == 'https://eatmoreram.com/') {
+  window.location.replace("https://eatmoreram.com/top100modureasons.php");
+}
 </script>
 <div class="page">
   <?php
