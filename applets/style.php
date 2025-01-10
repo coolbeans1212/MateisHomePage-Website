@@ -191,4 +191,10 @@
     border: none;
     border-top: 2px solid #131415;
   }
+  .warningBanner {
+    background: yellow;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
 </style>
