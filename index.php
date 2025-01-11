@@ -41,9 +41,6 @@ if (window.location.href == 'https://eatmoreram.com/') {
 }
 </script>
 <div class="page">
-  <div class="warningBanner">
-    This site will undergo maintenance on 11-01-25 for the entire day. Expect downtime.
-  </div>
   <?php
   include_once __DIR__ . "/applets/navigation_bar.php"; // :3
   ?>
