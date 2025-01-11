@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: "hi!!!!!!!!!!!!!!!! why are you making a nissue?? :( it means i have to do all the work!!!! shouldve made a pull request instead smh (obvious sarcasm)"
+        pr-message: "thank you for making a pr!!!!!!!!!!!!!!!!!!! get ready to get hit with a 'lgtm' and then not get merged for up to 7 days!!!!! or, if you submit a BAD pull request, you will receive a lBtm :O (looks bad to me). and you do not want that..."
