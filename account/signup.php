@@ -86,7 +86,14 @@ if ($requestCount >= $rateLimit && $currentTime - $lastRequestTime < $rateLimitD
     echo 'Too many requests in the specified time. If you are an organisation and would like to request a higher ratelimit, please contact matei@mateishome.page.';
     exit;
 }
-
+// Get the client's IP address
+if (array_key_exists('HTTP_CF_CONNECTING_IP', $_SERVER)) {
+    // Using Cloudflare
+    $clientIP = $_SERVER['HTTP_CF_CONNECTING_IP'];
+} else {
+    // Not using Cloudflare
+    $clientIP = $_SERVER['REMOTE_ADDR'];
+}
 function isPasswordValid($password, $confirmationpassword) { //runs check to see if the password is valid
     if ($password != $confirmationpassword) {
         return "the passwords do not match.";
@@ -123,13 +130,22 @@ function isUsernameValid($username) {
 
     return 200; //all is swell!
 }
+function isIpValid($ip) {
+    file_get_contents('https://api.stopforumspam.org/api?ip=' . $ip);
+    if(strpos($ip, '<appears>yes</appears>') !== false) {
+        return "the IP address is a known spam source. Yeah, take that. I finally managed to find a way to stop you from spamming my website.";
+    }
+    return 200; //all is swell!
+}
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo '<h1>Processing your sign up...</h1>';
     $isPasswordValid = isPasswordValid($_POST['password'], $_POST['cpassword']);
     $isUsernameValid = isUsernameValid($_POST['username']);
+    $isIpValid = isIpValid($clientIP);
     
-    if ($isPasswordValid === 200 && $isUsernameValid === 200) {
+    if ($isPasswordValid === 200 && $isUsernameValid === 200 && $isIpValid === 200) {
         $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT); //securidad
         require '/var/www/html/db.php'; //require_once fails for some reason? i have no idea why, please make pr if you know
         
