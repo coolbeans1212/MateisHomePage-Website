@@ -50,16 +50,15 @@ include_once __DIR__ . "/applets/navigation_bar.php"; // :3
 $offset = (int) $_GET['offset']; //integer :P
 $search = $_GET['search'];
 $searchParameter = "%$search%"; // why not searchParakilometer??!?
+require '/var/www/html/db.php';
 if ($offset) {
   if($search) {
-    require '/var/www/html/db.php';
     $sql = "SELECT * FROM users WHERE username LIKE ? ORDER BY CHAR_LENGTH(`username`) LIMIT 6 OFFSET ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param('si', $searchParameter, $offset);
     $stmt->execute();
     $result = $stmt->get_result();
   } else {
-    require '/var/www/html/db.php';
     $sql = "SELECT * FROM users ORDER BY id DESC LIMIT 6 OFFSET ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param('i', $offset);
@@ -68,14 +67,12 @@ if ($offset) {
   }
 } else {
   if($search) {
-    require '/var/www/html/db.php';
     $sql = "SELECT * FROM users WHERE username LIKE ? ORDER BY CHAR_LENGTH(`username`) LIMIT 6";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param('s', $searchParameter);
     $stmt->execute();
     $result = $stmt->get_result();
   } else {
-    require '/var/www/html/db.php';
     $sql = "SELECT * FROM users ORDER BY id DESC LIMIT 6";
     $result = $mysqli->query($sql);
   }
