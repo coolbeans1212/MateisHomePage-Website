@@ -46,19 +46,18 @@ if (window.location.href == 'https://eatmoreram.com/') {
   ?>
   <br>
   <div class="largeApplet">
-    <h1 id="datetime">
+    <h1><span id="datetime">Good day, </span>
       <script defer>
         // Will get the current time for the user and greet them based on it.
         var now = new Date();
         var hour = now.getHours();
         console.log(hour);
-        username = document.getElementById('datetime').innerHTML;
         if (hour >= 17) {
-          document.getElementById('datetime').innerHTML = 'Good evening, ' + username;
+          document.getElementById('datetime').innerHTML = 'Good evening, ';
         } else if (hour >= 12) {
-          document.getElementById('datetime').innerHTML = 'Good afternoon, '  + username;
+          document.getElementById('datetime').innerHTML = 'Good afternoon, ';
         } else {
-          document.getElementById('datetime').innerHTML = 'Good morning, '  + username;
+          document.getElementById('datetime').innerHTML = 'Good morning, ';
         }
       </script>
     <?php
