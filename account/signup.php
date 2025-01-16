@@ -131,9 +131,9 @@ function isUsernameValid($username) {
     return 200; //all is swell!
 }
 function isIpValid($ip) {
-    file_get_contents('https://api.stopforumspam.org/api?ip=' . $ip);
-    if(strpos($ip, '<appears>yes</appears>') !== false) { //same as if(str_contains($ip, '<appears>yes</appears>')) except i dont have php 8
-        return "the IP address is a known spam source. Yeah, take that. I finally managed to find a way to stop you from spamming my website.";
+    $result = file_get_contents('https://api.stopforumspam.org/api?ip=' . $ip);
+    if(strpos($result, '<appears>yes</appears>') !== false) { //same as if(str_contains($ip, '<appears>yes</appears>')) except i dont have php 8
+        return "the IP address is a known spam source. Stop spamming my website! >:(";
     }
     return 200; //all is swell!
 }
