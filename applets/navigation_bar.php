@@ -1,7 +1,7 @@
 <div class="header" id="header">
   <div class="headerOptions">
     <div class="navigationPanelOption" id="home">
-      <a href="/">
+      <a href="https://mateishome.page/">
       <img src="/files/images/HouseIcon.png" alt="Home 3d render">
       Home
       </a>
