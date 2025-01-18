@@ -48,9 +48,11 @@ include_once __DIR__ . "/../applets/navigation_bar.php"; // :3
       </script>
   </div>
   <br>
-  <div class="smallApplet" style="text-align: center; margin: auto; width: 10%;">
-      <a href="customise.php">Cancel</a>
-  </div>
+  <a href="customise.php">
+    <div class="smallApplet" style="text-align: center; margin: auto; width: 10%;">
+        Cancel
+    </div>
+  </a>
 </div>
 </body>
 </html>
