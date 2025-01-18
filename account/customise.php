@@ -6,7 +6,7 @@ if (isset($_SESSION["user_id"])) {
   $result = $mysqli->query($sql);
   $user = $result->fetch_assoc();
 } else {
-    header("Location: https://mateishome.page/login.php");
+    header("Location: https://mateishome.page/account/login.php");
 }
 ?>
 
