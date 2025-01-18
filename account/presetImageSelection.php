@@ -34,19 +34,23 @@ if ( window !== window.parent )
 include_once __DIR__ . "/../applets/navigation_bar.php"; // :3
 ?>
 <br>
-<div class="largeApplet">
-    <h1>Pick your favourite profile picture.</h1>
-    <span id="loadingIndicator">Loading images, please wait...</span><br>
-    <?php
-    for ($pfps = 1; $pfps <= 78; $pfps++) {
-        echo '<a href="customisationProcessing.php?set=true&image=' . $pfps . '"><img src="/files/images/pfps/thumbnails/' . $pfps . '.jpg" width="80px;" height="80px;"></img></a> ';
-    }
-    ?>
-    <script>
-        const element = document.getElementById("loadingIndicator");
-        element.remove();
-    </script>
-</div>
+  <div class="largeApplet">
+      <h1>Pick your favourite profile picture.</h1>
+      <span id="loadingIndicator">Loading images, please wait...</span><br>
+      <?php
+      for ($pfps = 1; $pfps <= 78; $pfps++) {
+          echo '<a href="customisationProcessing.php?set=true&image=' . $pfps . '"><img src="/files/images/pfps/thumbnails/' . $pfps . '.jpg" width="80px;" height="80px;"></img></a> ';
+      }
+      ?>
+      <script>
+          const element = document.getElementById("loadingIndicator");
+          element.remove();
+      </script>
+  </div>
+  <br>
+  <div class="smallApplet" style="text-align: center; margin: auto; width: 10%;">
+      <a href="customise.php">Cancel</a>
+  </div>
 </div>
 </body>
 </html>
