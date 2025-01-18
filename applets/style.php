@@ -143,6 +143,15 @@
     border-style: solid;
     border-width: 5px;
   }
+  .photographyPreview {
+    width: 100px;
+    height: 100px;
+    background: #00000055;
+    border: black;
+    border-style: solid;
+    border-width: 5px;
+    margin: 0px;
+  }
   .username {
     font-size: 35px;
     overflow: hidden;
@@ -189,7 +198,7 @@
   }
   hr {
     border: none;
-    border-top: 2px solid #131415;
+    border-top: 1px solid #fafbfc;
   }
   .warningBanner {
     background: yellow;
