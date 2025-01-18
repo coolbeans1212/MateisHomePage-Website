@@ -152,21 +152,21 @@ if (window.location.href == 'https://eatmoreram.com/') {
       </div>
       <div style="width: 33%;">
         <h2>Cool websites</h2>
-        <a target="_blank" href="https://zakkcarpenter.com">ZakksGames</a><br>
-        <a target="_blank" href="https://ploszukiwacz.is-a.dev/">Ploszukiwacz's website</a><br>
-        <a target="_blank" href="https://cyteon.tech/">Cyteon's website</a><br>
-        <a target="_blank" href="https://paintdev.co.uk">Paintdev's website</a><br>
-        <a target="_blank" href="https://computerblade.is-a.dev/">Computerblade's website</a><br>
-        <a target="_blank" href="https://aquiffoo.vercel.app/">Aquiffoo's website</a><br>
-        <a target="_blank" href="http://fartoo.com/">Fartoo Search</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://zakkcarpenter.com">ZakksGames</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://ploszukiwacz.is-a.dev/">Ploszukiwacz's website</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://cyteon.tech/">Cyteon's website</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://paintdev.co.uk">Paintdev's website</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://computerblade.is-a.dev/">Computerblade's website</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://aquiffoo.vercel.app/">Aquiffoo's website</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="http://fartoo.com/">Fartoo Search</a><br>
       </div>
       <div style="width: 33%;">
         <h2>External links</h2>
-        <a target="_blank" href="https://discord.com/users/712004994995322952">Discord</a><br>
-        <a target="_blank" href="mailto:matei@mateishome.page">Email</a><br>
-        <a target="_blank" href="https://mattamatt.newgrounds.com">Newgrounds</a><br>
-        <a target="_blank" href="https://stats.foldingathome.org/donor/id/729534072">Folding@Home (user)</a><br>
-        <a target="_blank" href="https://stats.foldingathome.org/team/1066116">Folding@Home (team)</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://discord.com/users/712004994995322952">Discord</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="mailto:matei@mateishome.page">Email</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://mattamatt.newgrounds.com">Newgrounds</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://stats.foldingathome.org/donor/id/729534072">Folding@Home (user)</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://stats.foldingathome.org/team/1066116">Folding@Home (team)</a><br>
       </div>
     </div>
 </div>
