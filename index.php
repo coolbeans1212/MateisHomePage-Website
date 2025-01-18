@@ -136,6 +136,40 @@ if (window.location.href == 'https://eatmoreram.com/') {
     </div>
   </div>
   <br>
+  <div class="largeApplet">
+    <h1>Quick Links</h1>
+    <div class="appletContainer">
+      <div style="width: 33%;">
+        <h2>MateisHomePages</h2>
+        <a href="/">Home</a><br>
+        <a href="/soonTM.php">Photography</a><br>
+        <a href="/soonTM.php">Software</a><br>
+        <a href="/users.php">Users</a><br>
+        <a href="/guestbook.php">Guestbook</a><br>
+        <a href="/msgboard.php">Message board</a><br>
+        <a href="/blog.php">Blog</a><br>
+        <a href="/contact.php">Contact</a><br>
+      </div>
+      <div style="width: 33%;">
+        <h2>Cool websites</h2>
+        <a target="_blank" href="https://zakkcarpenter.com">ZakksGames</a><br>
+        <a target="_blank" href="https://ploszukiwacz.is-a.dev/">Ploszukiwacz's website</a><br>
+        <a target="_blank" href="https://cyteon.tech/">Cyteon's website</a><br>
+        <a target="_blank" href="https://paintdev.co.uk">Paintdev's website</a><br>
+        <a target="_blank" href="https://computerblade.is-a.dev/">Computerblade's website</a><br>
+        <a target="_blank" href="https://aquiffoo.vercel.app/">Aquiffoo's website</a><br>
+        <a target="_blank" href="http://fartoo.com/">Fartoo Search</a><br>
+      </div>
+      <div style="width: 33%;">
+        <h2>External links</h2>
+        <a target="_blank" href="https://discord.com/users/712004994995322952">Discord</a><br>
+        <a target="_blank" href="mailto:matei@mateishome.page">Email</a><br>
+        <a target="_blank" href="https://mattamatt.newgrounds.com">Newgrounds</a><br>
+        <a target="_blank" href="https://stats.foldingathome.org/donor/id/729534072">Folding@Home (user)</a><br>
+        <a target="_blank" href="https://stats.foldingathome.org/team/1066116">Folding@Home (team)</a><br>
+      </div>
+    </div>
+</div>
 </div>
 </body>
 </html>
