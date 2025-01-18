@@ -39,13 +39,13 @@ include_once __DIR__ . "/../applets/navigation_bar.php"; // :3
             <h1>Sign up</h1>
             <form action="signup.php" method="post" id="signup">
                 <label for="username">Username</label><br>
-                <input type="text" id="username" name="username"><br>
+                <input type="text" id="username" name="username" required><br>
                 <label for="email">Email (optional)</label><br>
                 <input type="email" id="email" name="email"><br>
                 <label for="password">Password</label><br>
-                <input type="password" id="password" name="password"><br>
+                <input type="password" id="password" name="password" required><br>
                 <label for="cpassword">Confirm Password</label><br>
-                <input type="password" id="cpassword" name="cpassword"><br>
+                <input type="password" id="cpassword" name="cpassword" required><br>
                 <input type="submit" value="Sign up">
             </form>
         <?php endif; ?>
