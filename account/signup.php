@@ -48,6 +48,7 @@ include_once __DIR__ . "/../applets/navigation_bar.php"; // :3
                 <input type="password" id="cpassword" name="cpassword" required><br>
                 <input type="submit" value="Sign up">
             </form>
+            Powered by <img src="/files/images/stopforumspam.png" height="20px;" style="vertical-align: middle;">.
         <?php endif; ?>
         <?php
 
