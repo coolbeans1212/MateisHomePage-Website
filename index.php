@@ -158,6 +158,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
         <a target="_blank" rel="noopener noreferrer" href="https://paintdev.co.uk">Paintdev's website</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://computerblade.is-a.dev/">Computerblade's website</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://aquiffoo.vercel.app/">Aquiffoo's website</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="http://gizzy.pro/">Gizzy's website</a><br>
         <a target="_blank" rel="noopener noreferrer" href="http://fartoo.com/">Fartoo Search</a><br>
       </div>
       <div style="width: 33%;">
