@@ -116,7 +116,7 @@
   oblique {
     font-style: oblique;
   }
-  .navigationButton {
+  .navigationButton, .navigationButtonDisabled {
     border-radius: 10px;
     background-color: #191b1e;
     color: white;
@@ -127,6 +127,10 @@
     font-size: 100%;
     margin-left: 200px;
     margin-right: 200px;
+  }
+  .navigationButtonDisabled {
+    background-color: #191b1e99;
+    cursor: not-allowed;
   }
   .smallLineBreak {
     content: "";
