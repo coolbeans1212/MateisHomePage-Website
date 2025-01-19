@@ -36,6 +36,28 @@ include_once __DIR__ . "/applets/navigation_bar.php"; // :3
 ?>
 <hr style="width: 0px;">
 <?php
+$sql = "SELECT id from blog_entries WHERE visibility = 'public' ORDER BY id DESC LIMIT 1";
+$lastBlogPostID = $mysqli->query($sql);
+$lastBlogPostID = $lastBlogPostID->fetch_assoc();
+?>
+<?php
+function isMinimumBlogPost($id) {
+  if ($id == 1) {
+    echo 'Disabled';
+  }
+}
+function isMaximumBlogPost($id) {
+  global $lastBlogPostID;
+  if ($id == $lastBlogPostID['id']) {
+    echo 'Disabled';
+  }
+}
+?>
+<div class="appletContainer">
+  <a href="?id=<?php echo $_GET['id'] - 1; ?>"><button class="navigationButton<?php isMinimumBlogPost($_GET['id']); ?>"<?php isMinimumBlogPost($_GET['id']);?>>Previous</button></a> <a href="?id=<?php echo $_GET['id'] + 1; ?>"><button class="navigationButton<?php isMaximumBlogPost($_GET['id']); ?>" <?php isMaximumBlogPost($_GET['id']); ?>>Next</button></a>
+</div>
+<hr style="width: 0px;">
+<?php
 if ($_GET['id']) {
   $sql = "SELECT * FROM blog_entries WHERE id = ?";
   $stmt = $mysqli->prepare($sql);
@@ -43,17 +65,12 @@ if ($_GET['id']) {
   $stmt->execute();
   $blogs = $stmt->get_result();
   $blogs = $blogs->fetch_assoc();
-  echo '<div class="appletContainer"><a href="?id=' . ($_GET['id'] - 1) . '"><button class="navigationButton">Previous</button></a> <a href="?id=' . ($_GET['id'] + 1) . '"><button class="navigationButton">Next</button></div></a><hr style="width: 0px;">';
   if ($blogs['visibility'] == 'public' || ($blogs['visibility'] == 'admin' && $user['admin'] == 1)) {
     echo '<div class="longApplet">' . '<oblique>#' . $blogs['id'] . ', published ' . $blogs['date'] . '</oblique>' . '<h2>' . $blogs['title'] . '</h2>' . '<p>' . $blogs['body'] . '</p>' . '</div><br>';
   } else {
     echo '<div class="longApplet"><h2>Oh no! An error occured.</h2><p>We couldn\'t access this blog post. You may not have the appropriate permissions, or it may have never existed it all.</p></div>';
   }
 } else {
-  $sql = "SELECT id from blog_entries WHERE visibility = 'public' ORDER BY id DESC LIMIT 1";
-  $lastBlogPostID = $mysqli->query($sql);
-  $lastBlogPostID = $lastBlogPostID->fetch_assoc();
-  print_r($lastBlogPostID);
   echo '<div class="longApplet">Please wait, you are being redirected...</div>';
   echo '<script>parent.self.location=\'blog.php?id=' . $lastBlogPostID['id'] . '\';</script>';
 }
