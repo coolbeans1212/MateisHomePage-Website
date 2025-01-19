@@ -205,5 +205,22 @@
     margin: 10px;
     border-radius: 5px;
   }
-
+  <?php if ($_GET['rainbow'] == true): ?>
+  @keyframes colorAnimation {
+    0% { color: red; }
+    10% { color: orangered; }
+    20% { color: orange; }
+    30% { color: yellow; }
+    40% { color: yellowgreen; }
+    50% { color: green; }
+    60% { color: turquoise; }
+    70% { color: #5582ff; }
+    80% { color: blue; }
+    90% { color: blueviolet; }
+    100% { color: red; }
+  }
+  h1 {
+    animation: colorAnimation 5s infinite;
+  }
+  <?php endif; ?>
 </style>
