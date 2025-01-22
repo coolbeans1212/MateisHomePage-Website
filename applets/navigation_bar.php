@@ -25,10 +25,17 @@
       </a>
     </div>
     <div class="navigationPanelOption" id="guestbook">
+      <?php if(!$user): ?>
       <a href="/guestbook.php">
       <img src="/files/images/GuestbookIcon.png" alt="Book 3d render">
       Guestbook
       </a>
+      <?php else: ?>
+        <a href="/msgboard.php">
+      <img src="/files/images/GuestbookIcon.png" alt="Book 3d render">
+      Msg Board
+      </a>
+      <?php endif; ?>
     </div>
     <div class="navigationPanelOption" id="blog">
       <a href="/blog.php">
@@ -49,7 +56,13 @@
   </div>
   <div class="headerReactiveText" id="headerReactiveText">
   <?php
+  session_start();
   $mysqli = require "/var/www/html/db.php";
+  if (isset($_SESSION["user_id"])) {
+    $sql = "SELECT * FROM users WHERE id = {$_SESSION["user_id"]}";
+    $result = $mysqli->query($sql);
+    $user = $result->fetch_assoc();
+  }
   if (!isset($_POST["password"])) { //if this is set, it means the user is currently logging in and things will break if this tries to load
     if (isset($_SESSION["user_id"]) && (!$user['username'])) { //yeah thats right. even the HEADER has to have a database connection. take that
       $sql = "SELECT username FROM users WHERE id = {$_SESSION["user_id"]}";
