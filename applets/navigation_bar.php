@@ -58,17 +58,12 @@
   <?php
   session_start();
   $mysqli = require "/var/www/html/db.php";
-  if (isset($_SESSION["user_id"])) {
+  if (isset($_SESSION["user_id"])) { //yeah thats right. even the HEADER has to have a database connection. take that
     $sql = "SELECT * FROM users WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
   }
   if (!isset($_POST["password"])) { //if this is set, it means the user is currently logging in and things will break if this tries to load
-    if (isset($_SESSION["user_id"]) && (!$user['username'])) { //yeah thats right. even the HEADER has to have a database connection. take that
-      $sql = "SELECT username FROM users WHERE id = {$_SESSION["user_id"]}";
-      $result = $mysqli->query($sql);
-      $user = $result->fetch_assoc();
-    }
     if ($user) {
       echo 'You are logged in as ' . $user['username'] . '. <a href="/logout.php">Sign out here</a> or <a href="/account/customise.php">customise your account here</a>.';
     } else {
