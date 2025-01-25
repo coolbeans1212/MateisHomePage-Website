@@ -167,6 +167,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
         <h2>External links</h2>
         <a target="_blank" rel="noopener noreferrer" href="https://discord.com/users/712004994995322952">Discord</a><br>
         <a target="_blank" rel="noopener noreferrer" href="mailto:matei@mateishome.page">Email</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/coolbeans1212">GitHub</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://mattamatt.newgrounds.com">Newgrounds</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://stats.foldingathome.org/donor/id/729534072">Folding@Home (user)</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://stats.foldingathome.org/team/1066116">Folding@Home (team)</a><br>
