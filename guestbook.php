@@ -92,8 +92,8 @@ if (mysqli_num_rows($result) > 0) {
         echo '<span class="username" style="overflow: visible;">' . htmlspecialchars($row['username']) . '</span>';
         echo '<oblique>#' . htmlspecialchars($row['id']) . '</oblique>';
         echo '</div>';
-        echo '<span>' . htmlspecialchars($row['message']) . '</span><br>';
-        echo '<span style="position: absolute; bottom: 0; width: 750px;">Sent by ' . htmlspecialchars($row['username']) . ' on ' . htmlspecialchars($row['date'])  . '</span>';
+        echo '<span>' . htmlspecialchars($row['message']) . '</span>';
+        echo '<span style="alignSelf: end;">Sent by ' . htmlspecialchars($row['username']) . ' on ' . htmlspecialchars($row['date'])  . '</span>';
         echo '</div></div>';
     }
 }
