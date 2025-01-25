@@ -161,6 +161,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
         <a target="_blank" rel="noopener noreferrer" href="https://aquiffoo.vercel.app/">Aquiffoo's website</a><br>
         <a target="_blank" rel="noopener noreferrer" href="http://gizzy.pro/">Gizzy's website</a><br>
         <a target="_blank" rel="noopener noreferrer" href="http://fartoo.com/">Fartoo Search</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://amigaos.net">AmigaOS</a><br>
       </div>
       <div style="width: 33%;">
         <h2>External links</h2>
