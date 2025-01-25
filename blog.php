@@ -66,7 +66,8 @@ if ($_GET['id']) {
   $blogs = $stmt->get_result();
   $blogs = $blogs->fetch_assoc();
   if ($blogs['visibility'] == 'public' || ($blogs['visibility'] == 'admin' && $user['admin'] == 1)) {
-    echo '<div class="longApplet">' . '<oblique>#' . $blogs['id'] . ', published ' . $blogs['date'] . '</oblique>' . '<h2>' . $blogs['title'] . '</h2>' . '<p>' . $blogs['body'] . '</p>' . '</div><br>';
+    echo '<div class="longApplet">' . '<oblique>#' . $blogs['id'] . ', published ' . $blogs['date'] . ' by ' . $blogs['author'] . '.</oblique>'; //give information about the blog post
+    echo '<h2>' . $blogs['title'] . '</h2>' . '<p>' . $blogs['body'] . '</p>' . '</div><br>'; //main body and title of the blog post
   } else {
     echo '<div class="longApplet"><h2>Oh no! An error occured.</h2><p>We couldn\'t access this blog post. You may not have the appropriate permissions, or it may have never existed it all.</p></div>';
   }
