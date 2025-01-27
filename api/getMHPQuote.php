@@ -11,6 +11,8 @@ if (!$_GET['type'] || $_GET['type'] == 'plaintext') {
     echo $quote;
 } elseif ($_GET['type'] == 'json') {
     echo json_encode(array('date' => $date, 'quote' => $quote));
+} elseif ($_GET['type'] == 'complete') {
+    echo $date . '\'s quote is: \'' . $quote . '\'';
 } else {
     echo 'Invalid type specified.';
 }
