@@ -106,14 +106,16 @@ if (window.location.href == 'https://eatmoreram.com/') {
       ?><br>
       System memory:
       <?php //i hate it but it works :ε
-      $freemem = shell_exec('free');
-      $freemem2 = preg_split("/\r\n|\n|\r/", $freemem);
+      $freemem = shell_exec('free'); //command to get system memory
+      $freemem2 = preg_split("/\r\n|\n|\r/", $freemem); //weird regular expression thing that cuts up the output of the command
+      //black magic dont touch
       $important_line = $freemem2[1];
-      $memory_parts = preg_split('/\s+/', trim($important_line));
+      $memory_parts = preg_split('/\s+/', trim($important_line)); //more weird regex
       echo $memory_parts[3] . ' / ' . $memory_parts[1];
       ?><br>
       Storage:
       <?php
+      //this gets the available disk space in the MateisHomePage server and prints it (because some users are curious :P)
       $diskspace = shell_exec('df -T /');
       $diskspacebutseperated = preg_split("/\r\n|\n|\r/", $diskspace);
       $diskspaceimportantline = $diskspacebutseperated[1];
@@ -126,7 +128,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
       <h2>Quote of the day:</h2>
       <?php
       echo date('F jS, Y') . '\'s quote is:<br>\'';
-      //use the API to get the quote
+      //use the API to get the daily quote
       echo file_get_contents('https://mateishome.page/api/getMHPQuote.php?type=plaintext') . '\'';
       ?>
     </div>
