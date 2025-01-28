@@ -209,6 +209,11 @@
     margin: 10px;
     border-radius: 5px;
   }
+  .codeBlock {
+    background-color: #12100f;
+    padding: 3px;
+    border-radius: 5px;
+  }
   <?php if ($_GET['rainbow'] == true): ?>
   @keyframes colorAnimation {
     0% { color: red; }
