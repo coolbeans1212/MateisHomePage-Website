@@ -216,7 +216,7 @@
   }
   .miniText {
     font-size: 10px;
-    line-height: 1em !important;
+    line-height: normal !important;
   }
   <?php if ($_GET['rainbow'] == true): ?>
   @keyframes colorAnimation {
