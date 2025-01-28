@@ -137,7 +137,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
   <div class="largeApplet">
     <h1>Quick Links</h1>
     <div class="appletContainer">
-      <div style="width: 33%;">
+      <div style="width: 25%;">
         <h2>MateisHomePages</h2>
         <a href="/">Home</a><br>
         <a href="/soonTM.php">Photography</a><br>
@@ -149,7 +149,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
         <a href="/contact.php">Contact</a><br>
         <a href="https://status.mateishome.page">Website uptime</a><br>
       </div>
-      <div style="width: 33%;">
+      <div style="width: 25%;">
         <h2>Cool websites</h2>
         <a target="_blank" rel="noopener noreferrer" href="https://zakkcarpenter.com">ZakksGames</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://www.is-a-furry.dev/">PlOszukiwacz's website</a><br>
@@ -161,7 +161,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
         <a target="_blank" rel="noopener noreferrer" href="http://fartoo.com/">Fartoo Search</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://amigaos.net">AmigaOS</a><br>
       </div>
-      <div style="width: 33%;">
+      <div style="width: 25%;">
         <h2>External links</h2>
         <a target="_blank" rel="noopener noreferrer" href="https://discord.com/users/712004994995322952">Discord</a><br>
         <a target="_blank" rel="noopener noreferrer" href="mailto:matei@mateishome.page">Email</a><br>
@@ -169,6 +169,10 @@ if (window.location.href == 'https://eatmoreram.com/') {
         <a target="_blank" rel="noopener noreferrer" href="https://mattamatt.newgrounds.com">Newgrounds</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://stats.foldingathome.org/donor/id/729534072">Folding@Home (user)</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://stats.foldingathome.org/team/1066116">Folding@Home (team)</a><br>
+      </div>
+      <div style="width: 25%;">
+        <h2>Legal</h2>
+        <a href="/legal/privacypolicy.php">Privacy Policy</a><br>
       </div>
     </div>
 </div>
