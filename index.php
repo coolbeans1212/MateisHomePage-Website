@@ -85,7 +85,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
     <a href="blog.php" class="smallApplet" style="background: url('/files/images/blog_applet_background.png') no-repeat 0px 0px; background-size: cover;">
     <div>
       <h2>Latest blog entry:</h2> <?php echo $blog['title']; ?><br>
-      <span style="font-size: 10px; line-height: initial;"><?php echo htmlspecialchars(substr($blog['body'], 0, 150)) . '...';?></span><br>
+      <span class="miniText"><?php echo htmlspecialchars(substr($blog['body'], 0, 150)) . '...';?></span><br>
       <span>Posted by <?php echo $blog['author'];?> on <?php echo $blog['date'];?></span>
     </div>
     </a>
