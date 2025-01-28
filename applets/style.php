@@ -214,6 +214,10 @@
     padding: 3px;
     border-radius: 5px;
   }
+  .miniText {
+    font-size: 10px;
+    line-height: 1em !important;
+  }
   <?php if ($_GET['rainbow'] == true): ?>
   @keyframes colorAnimation {
     0% { color: red; }
