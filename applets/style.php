@@ -9,7 +9,11 @@
     background-image: url(/files/images/main_site_background_image.png);
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+  }
+  @media screen and (min-width: 1920px) {
+    body {
+      background-size: 100% auto;
+    }
   }
   .header {
     height: 106px;
