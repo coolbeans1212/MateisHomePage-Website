@@ -1,28 +1,28 @@
-.well-known/
-Photography.png
-Untitled.png
-admin/
-coolstuff/
-files/autodelete/
-files/fonts/
-files/images/Flag_of_Romania.png
-files/images/badges/
-files/images/banner.png
-files/images/blissnight.png
-files/images/button_endercatcore.gif
-files/images/christmas_picmix.gif
-files/images/comida_basura.gif
-files/images/goodnightchao.gif
-files/images/happybirthdayepoxy.gif
-files/images/help/
-files/images/php_powered.gif
-files/images/picmix.com_12168044.gif
-files/images/secret_dont_look/
-files/images/user.png
-files/other/
-files/txt/test.php
-files/wav/
-files/zip/
-pfpinfo.php
-photography/
-testing.php
+.well-known/           # Ignore the entire ".well-known" directory. This folder often holds configuration files for services like SSL certificates or website validation, which don’t need to be tracked by Git.
+Photography.png        # Ignore the specific image file "Photography.png". It seems like an image that is either temporary or not needed in the repository.
+Untitled.png           # Ignore another image file, "Untitled.png", which could be something unfinished or irrelevant to the project.
+admin/                 # Ignore the entire "admin" directory. This could be a folder that contains admin-related files or pages, which you might not want to track in your Git repository.
+coolstuff/             # Ignore the "coolstuff" directory. Possibly a folder for personal, non-essential, or experimental files.
+files/autodelete/      # Ignore the "autodelete" folder within "files". This could contain temporary or auto-generated files that don’t need version control.
+files/fonts/           # Ignore the "fonts" directory inside "files", which might hold font files that are either temporary or are not needed in version control.
+files/images/Flag_of_Romania.png  # Ignore a specific image file (the flag of Romania) inside "files/images". It might be a file not needed for version control.
+files/images/badges/   # Ignore the entire "badges" directory inside "files/images", possibly for badge images that aren’t relevant to track in Git.
+files/images/banner.png  # Ignore a specific banner image file within the "files/images" directory.
+files/images/blissnight.png  # Ignore an image called "blissnight.png" in the "files/images" folder. Likely not needed in Git.
+files/images/button_endercatcore.gif  # Ignore a specific GIF image file, "button_endercatcore.gif", probably not essential to track.
+files/images/christmas_picmix.gif  # Ignore a Christmas-themed GIF image. Temporary or non-essential media files don’t need to be in version control.
+files/images/comida_basura.gif  # Ignore a GIF named "comida_basura.gif". Like other media files, it may not need to be tracked.
+files/images/goodnightchao.gif  # Ignore a "goodnightchao.gif" file. Another media file that doesn’t need version control.
+files/images/happybirthdayepoxy.gif  # Ignore a GIF for a birthday message ("happybirthdayepoxy.gif").
+files/images/help/     # Ignore the entire "help" directory inside "files/images", which might contain help-related images that aren’t necessary to track.
+files/images/php_powered.gif  # Ignore a PHP-powered GIF image, potentially used for a logo or branding that’s not needed in version control.
+files/images/picmix.com_12168044.gif  # Ignore a specific PicMix gif image, possibly related to some online platform or user-generated content.
+files/images/secret_dont_look/  # Ignore the "secret_dont_look" directory inside "files/images". This could be a folder with sensitive or personal content that shouldn't be in the repository.
+files/images/user.png  # Ignore a user-related image, "user.png". This might be a profile image or placeholder.
+files/other/            # Ignore the entire "other" directory inside "files", which may contain miscellaneous files not important for Git.
+files/txt/test.php     # Ignore a PHP file "test.php" inside "files/txt". Likely a temporary script or test file not necessary in version control.
+files/wav/             # Ignore the entire "wav" folder inside "files". This folder may contain audio files (WAV format) that don't need version control.
+files/zip/             # Ignore the entire "zip" folder inside "files". Could contain compressed files, which are usually not necessary to track.
+pfpinfo.php            # Ignore the specific PHP file "pfpinfo.php". This might be a script that isn’t important to include in version control.
+photography/           # Ignore the "photography" directory. This could be a folder for image assets or other files related to photography, but may not be relevant for Git.
+testing.php            # Ignore the PHP file "testing.php". It might be a script that was used for testing purposes, not relevant for the main project.

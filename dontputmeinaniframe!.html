@@ -1,35 +1,43 @@
-<head>
-    <style>
-        @font-face {
-            font-family: pusab;
-            src: url(/files/fonts/PUSAB.otf);
+<head> <!-- This starts the head section of the HTML document -->
+    <style> <!-- This starts the CSS style block -->
+        @font-face {  /* Defines a custom font that can be used throughout the document */
+            font-family: pusab;  /* The name of the custom font is 'pusab' */
+            src: url(/files/fonts/PUSAB.otf);  /* Specifies the location of the font file (PUSAB.otf) that will be loaded from the /files/fonts/ directory */
         }
-        span {
-            font-family: pusab;
+        span {  /* Targets all <span> elements on the page */
+            font-family: pusab;  /* Sets the font of all <span> elements to 'pusab' (the custom font defined earlier) */
         }
-        .imgbox {
-            display: grid;
+        .imgbox {  /* Targets elements with the class "imgbox" */
+            display: grid;  /* Sets the layout mode of these elements to grid, allowing elements to be arranged in a flexible grid-based layout */
         }
-        .center-fit {
-            max-width: 100%;
-            max-height: 20vh;
+        .center-fit {  /* Targets elements with the class "center-fit" */
+            max-width: 100%;  /* Limits the maximum width of these elements to 100% of their containing element */
+            max-height: 20vh;  /* Limits the maximum height of these elements to 20% of the viewport height */
         }
-        .center-fit2 {
-            max-width: 100%;
-            max-height: 75vh;
+        .center-fit2 {  /* Targets elements with the class "center-fit2" */
+            max-width: 100%;  /* Limits the maximum width of these elements to 100% of their containing element */
+            max-height: 75vh;  /* Limits the maximum height of these elements to 75% of the viewport height */
         }
-    </style>
-</head>
-<body>
-<span>
-<!--<h1 style="color: #ff0000; margin-bottom: 5px;">CBF Detected</h1>
-<span>Click Between Frames is illegitimate and will not be allowed for use on MateisHomePage.</span><br>
-<span>Please disable the mod in order to continue surfing.</span></span>-->
-<div class="imgbox" style="background-color: #6f6f6f;">
-    <img class="center-fit" src='/files/images/cbf.png'>
-</div>
-<br>
-<div class="imgbox">
-<iframe width="1200" height="900" class="center-fit2" src="https://www.youtube.com/embed/eyEmzX0Sek0?rel=0?version=3&autoplay=1&controls=0&&showinfo=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-</body>
+    </style> <!-- This ends the CSS style block -->
+</head> <!-- This ends the head section of the HTML document -->
+<body> <!-- This starts the body section of the HTML document -->
+<span> <!-- This starts a <span> element, a generic inline container for text or other elements -->
+<!--<h1 style="color: #ff0000; margin-bottom: 5px;">CBF Detected</h1> <!-- This is a commented-out <h1> heading that would have been red (#ff0000) with a 5px bottom margin. It's currently not displayed because it's commented out -->
+<span>Click Between Frames is illegitimate and will not be allowed for use on MateisHomePage.</span><br> <!-- This span element contains text explaining that a mod (Click Between Frames) is not allowed on the website, and it's followed by a line break -->
+<span>Please disable the mod in order to continue surfing.</span> <!-- This span element contains a message asking the user to disable the mod to continue -->
+</span> <!-- This ends the <span> element -->
+
+<div class="imgbox" style="background-color: #6f6f6f;"> <!-- This creates a <div> with the class "imgbox" and a background color of dark grey (#6f6f6f) -->
+    <img class="center-fit" src='/files/images/cbf.png'> <!-- This adds an image with the class "center-fit", which will be styled to fit within the maximum height of 20vh and width of 100% of its container. The image is located at /files/images/cbf.png -->
+</div> <!-- This ends the <div> with the class "imgbox" -->
+<br> <!-- This adds a line break (a new line) -->
+<div class="imgbox"> <!-- This creates another <div> with the class "imgbox" -->
+<iframe width="1200" height="900" class="center-fit2" src="https://www.youtube.com/embed/eyEmzX0Sek0?rel=0?version=3&autoplay=1&controls=0&&showinfo=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!-- This embeds a YouTube video in an <iframe> with specific attributes:
+- width="1200" and height="900" set the size of the iframe
+- class="center-fit2" applies the class which restricts the video to 75% of the viewport height
+- The video URL (src) contains various parameters like autoplay=1 (autoplay the video), controls=0 (hide controls), and loop=1 (loop the video)
+- allowfullscreen lets the video be viewed in fullscreen mode
+- referrerpolicy="strict-origin-when-cross-origin" controls the referrer information sent with the request
+- allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allows specific features like autoplay and sharing -->
+</div> <!-- This ends the <div> with the class "imgbox" -->
+</body> <!-- This ends the body section of the HTML document -->

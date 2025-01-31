@@ -1,28 +1,56 @@
-[
-    "When life gives you lemons, make lemonade.",
-    "Patience is a virtue.",
-    "If at first you don't succeed, lower your expectations until you're a success.",
-    "MateisHomePage Technologies says, \"Awesome sauce software for everyone!!1!\"",
-    "Raise your words, not your voice, for it is rain that grows flowers not thunder.",
-    "goob",
-    "Don't hate the player, hate the game.",
-    "Don't hate the game, hate the player.",
-    "Newgrounds: Everything, by everyone.",
-    "i use arch btw",
-    "It's actually <strong>Microsoft</strong> Windows, not just Windows.",
-    "<a href=\"https://s.soggy.cat/\">https://s.soggy.cat</a>",
-    "Why work smarter, not harder, when you can work smarter and harder?",
-    "CyberCenturion is awesome.",
-    "Don't kill two birds with one stone, that's mean.",
-    "It wasn't a rage quit, it was a tactical retreat.",
-    "Time is money",
-    "Guess what? (answer will be revealed tomorrow)",
-    "Chicken butt. (answer to yesterday's question)",
-    "All's well that ends well.",
-    "midis2jam2 is one of the coolest software ever. :D",
-    "blip? blip.",
-    "eat more ram it is beneficial for your health",
-    "<a href=\"https://www.felixcloutier.com/x86/cvtsd2si\">Convert Scalar Double Precision Floating-Point Value to Doubleword Integer</a>",
-    "PHP Fatal Error in /var/www/html/index.php on line 421840: L sucks to be you heres some obscure error with only 2 results on google!!!!",
-    "github copilot keeps suggesting me to put \"I'm not a robot, I'm a unicorn\""
-]
+[ // This starts an array in PHP, which is a way of storing multiple values together. The square brackets are used to define the array.
+    "When life gives you lemons, make lemonade.", // A string inside the array. It represents a saying or proverb. 
+    // Strings are enclosed in double quotes, and this one is a motivational phrase.
+
+    "Patience is a virtue.", // Another string, this one is a well-known saying highlighting the importance of patience.
+
+    "If at first you don't succeed, lower your expectations until you're a success.", // A humorous and slightly cynical variation of the classic "try again" saying.
+
+    "MateisHomePage Technologies says, \"Awesome sauce software for everyone!!1!\"", // String with an embedded quote. The backslashes before the quote escape the quotation marks so they can be part of the string.
+    // This one seems to be a playful marketing tagline.
+
+    "Raise your words, not your voice, for it is rain that grows flowers not thunder.", // Another thoughtful quote, promoting the idea of peaceful communication.
+    
+    "goob", // A random word, possibly nonsensical. It's just a string with no additional meaning unless the context is clear.
+
+    "Don't hate the player, hate the game.", // A well-known expression that implies not blaming individuals but rather the system or circumstances.
+
+    "Don't hate the game, hate the player.", // A reversal of the previous saying, offering a different perspective on blaming others.
+
+    "Newgrounds: Everything, by everyone.", // A reference to Newgrounds, a popular website for flash games, art, and animation. The string could be their tagline.
+
+    "i use arch btw", // Internet meme referencing "Arch Linux," a popular but complicated Linux distribution. It's often used humorously in tech circles.
+
+    "It's actually <strong>Microsoft</strong> Windows, not just Windows.", // A string with HTML code embedded. The <strong> tag will make the word "Microsoft" appear bold in a webpage context.
+
+    "<a href=\"https://s.soggy.cat/\">https://s.soggy.cat</a>", // A hyperlink in HTML format inside a string. The href attribute specifies the link's URL, and the text between the <a> tags is what will appear on the page.
+
+    "Why work smarter, not harder, when you can work smarter and harder?", // A sarcastic twist on the phrase “work smarter, not harder.” Suggests a new approach combining both.
+
+    "CyberCenturion is awesome.", // A phrase expressing admiration for something called "CyberCenturion," likely a name or title of a game or product.
+
+    "Don't kill two birds with one stone, that's mean.", // A humorous twist on the expression “killing two birds with one stone” which means achieving two things with a single action.
+
+    "It wasn't a rage quit, it was a tactical retreat.", // Another humorous phrase, reinterpreting the concept of a "rage quit" (leaving a game in frustration) as a more strategic decision.
+
+    "Time is money", // A famous saying implying that time is valuable, often used in business contexts to emphasize productivity.
+
+    "Guess what? (answer will be revealed tomorrow)", // A phrase creating suspense, possibly referring to an upcoming revelation or answer.
+
+    "Chicken butt. (answer to yesterday's question)", // A playful and nonsensical answer to a previously posed question. It’s often used in jokes or casual conversations.
+
+    "All's well that ends well.", // A classic Shakespearean quote meaning that if the end result is good, then everything that happened before is forgiven.
+
+    "midis2jam2 is one of the coolest software ever. :D", // Refers to software named "midis2jam2." The emoticon ":D" suggests the speaker is happy about the software.
+
+    "blip? blip.", // A brief, onomatopoeic exchange. Could be referencing a sound or an idea in a casual, playful way.
+
+    "eat more ram it is beneficial for your health", // A humorous and incorrect statement. RAM (Random Access Memory) is a computer component, and the phrase is not meant to be taken seriously.
+
+    "<a href=\"https://www.felixcloutier.com/x86/cvtsd2si\">Convert Scalar Double Precision Floating-Point Value to Doubleword Integer</a>", // Another HTML link, this time to a technical resource. The string is a URL with an explanation of a low-level operation in computing.
+
+    "PHP Fatal Error in /var/www/html/index.php on line 421840: L sucks to be you heres some obscure error with only 2 results on google!!!!", // A playful exaggeration of a PHP error message. PHP Fatal Errors are serious errors that stop the execution of a script. The message mocks the obscure nature of some error messages that have little online documentation.
+
+    "github copilot keeps suggesting me to put \"I'm not a robot, I'm a unicorn\"" // Refers to GitHub Copilot, an AI-powered code suggestion tool. The phrase "I'm not a robot, I'm a unicorn" is an absurd response, often used humorously in this context.
+
+] // This closes the array. The square brackets are used to indicate the end of the list of values.
