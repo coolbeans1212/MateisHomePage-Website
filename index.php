@@ -148,6 +148,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
         <a href="/blog.php">Blog</a><br>
         <a href="/contact.php">Contact</a><br>
         <a href="https://status.mateishome.page">Website uptime</a><br>
+        <a href="/api/docs/">API Documentation</a><br>
       </div>
       <div style="width: 25%;">
         <h2>Cool websites</h2>
