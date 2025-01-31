@@ -93,11 +93,8 @@ if (window.location.href == 'https://eatmoreram.com/') {
       <h2>Website health:</h2>
       Uptime:
       <?php //get website uptime :3
-      $data = shell_exec('uptime');
-      $uptime = explode(' up ', $data);
-      $uptime = explode(',', $uptime[1]);
-      $uptime = $uptime[0] . ', '. strtok($uptime[1], ':') . ' hours, ' . strtok(':') . ' minutes.';
-      echo $uptime;
+      $uptime = shell_exec('cat /proc/uptime | awk \'{print int($1)}\'');
+      echo floor($uptime / 86400) . ' days, ' . floor($uptime / 3600 % 24) . ' hours, ' . floor($uptime / 60 % 60) . ' minutes.';
       ?>
       Packages installed:
       <?php //get packages installed :3
