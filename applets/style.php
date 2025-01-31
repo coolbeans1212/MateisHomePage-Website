@@ -16,7 +16,6 @@
     }
   }
   .header {
-    height: 106px;
     color: #ffffff;
     border-radius: 10px;
     background: #2e2e39 url(/files/images/top_navigation_panel.png) no-repeat 0px 0px;
