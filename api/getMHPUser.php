@@ -2,7 +2,7 @@
 $mysqli = require_once __DIR__ . "/../db.php";
 require_once __DIR__ . "/internalFunctions.php";
 
-if (!isset($_GET['id'] || !is_numeric($_GET['id'])) {
+if (!(isset($_GET['id']) || !is_numeric($_GET['id']))) {
     header("HTTP/1.1 400 Bad Request");
     die("Invalid user ID.");
 }
