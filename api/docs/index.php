@@ -40,6 +40,7 @@ include_once __DIR__ . "/../../applets/navigation_bar.php"; // :3
     <h2>Links to documentations</h2>
     <ul>
     <a href="quotes.php"><li>Quote API</li></a>
+    <a href="users.php"><li>User API</li></a>
     </ul>
 </div>
 </div>
