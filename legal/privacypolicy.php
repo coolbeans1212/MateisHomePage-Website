@@ -65,7 +65,9 @@ include_once __DIR__ . "/../applets/navigation_bar.php"; // :3
     <li>IP address - shared with StopForumSpam to prevent spam accounts</li>
     <li>IP address and browser information - processed by Cloudflare for security and performance reasons</li>
   </ul>
-  <p>No personal data is sold or shared for advertising purposes. Yet. (no im just kidding ill probably never put ads on here unless im desperate)</p>
+  <p>No personal data is sold or shared for advertising purposes, however there are advertisements on the website. These are johnvertisements, and unlike other advertisements, they are awesome. You can easily
+  <a href="/nomorejohn.php">disable johnvertisements</a> if you don't like them.</p>
+  </p>
 </div>
 </div>
 </body>
