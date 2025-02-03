@@ -66,8 +66,9 @@ include_once __DIR__ . "/../applets/navigation_bar.php"; // :3
     <li>IP address and browser information - processed by Cloudflare for security and performance reasons</li>
   </ul>
   <p>No personal data is sold or shared for advertising purposes, however there are advertisements on the website. These are johnvertisements, and unlike other advertisements, they are awesome. You can easily
-  <a href="/nomorejohn.php">disable johnvertisements</a> if you don't like them.</p>
+  <a href="/nomorejohn.php">disable johnvertisements</a> if you don't like them. Johnvertisements only store your IP address. Please email john if you do not wish for your ip to be stored.</p>
   </p>
+  <p>Privacy policy last updated: 03/02/2025</p>
 </div>
 </div>
 </body>
