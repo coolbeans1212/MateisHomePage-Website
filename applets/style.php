@@ -221,6 +221,10 @@
     font-size: 10px;
     line-height: normal !important;
   }
+  .smallMargins {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
   <?php if ($_GET['rainbow'] == true): ?>
   @keyframes colorAnimation {
     0% { color: red; }

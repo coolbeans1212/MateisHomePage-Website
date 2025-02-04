@@ -15,3 +15,21 @@ function getPfpFromUsername($username) {
         return '/files/images/pfps/error.png';
     }
 }
+
+function isUserModerated($userID) {
+    $mysqli = require "/var/www/html/db.php";
+    $sql = "SELECT * FROM moderation WHERE userID = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('i', $userID);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $moderation = $result->fetch_assoc();
+        if ($moderation && strtotime($moderation['expires']) > time()) {
+            return json_encode($moderation);
+        }
+    }
+
+    return false;
+}
