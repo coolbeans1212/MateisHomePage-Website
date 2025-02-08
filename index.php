@@ -187,7 +187,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
       </div>
     <br>
     <div class="longApplet">
-      Zach Orange sez: '<span id="meowmeow">meow meow meow</span>'
+      Zach Orange sez: '<span id="meowmeow">please wait while we load the meows...</span>'
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
