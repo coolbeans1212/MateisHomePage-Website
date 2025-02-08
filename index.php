@@ -184,6 +184,11 @@ if (window.location.href == 'https://eatmoreram.com/') {
         <a href="/legal/privacypolicy.php">Privacy Policy</a><br>
       </div>
     </div>
+      </div>
+    <br>
+    <div class="longApplet">
+      Zach Orange sez: <?php $meow = json_decode(file_get_contents("https://garybot.dev/api/meow")); echo '\'' . $meow->message . '\''; ?>
+    </div>
 </div>
 </div>
 </body>
