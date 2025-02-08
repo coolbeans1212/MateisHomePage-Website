@@ -136,7 +136,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
     <div style="display: flex;">
       <iframe src="https://john.citrons.xyz/embed?ref=mateishome.page" style="margin-left:auto;display:block;margin-right:auto;max-width:732px;width:100%;height:94px;border:none;" title="johnvertisement"></iframe>
         <div>
-          <a href="nomorejohn.php">Click here</a> if you never want to see a johnvertisement again (for a decade or until you clear your cookies).</a>
+          <a href="nomorejohn.php">Click here if you never want to see a johnvertisement again</a> (for a decade or until you clear your cookies).</a>
         </div>
     </div>
   </div>
