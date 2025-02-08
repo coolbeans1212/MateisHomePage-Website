@@ -187,8 +187,18 @@ if (window.location.href == 'https://eatmoreram.com/') {
       </div>
     <br>
     <div class="longApplet">
-      Zach Orange sez: <?php $meow = json_decode(file_get_contents("https://garybot.dev/api/meow")); echo '\'' . $meow->message . '\''; ?>
+      Zach Orange sez: '<span id="meowmeow">meow meow meow</span>'
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $.getJSON("https://garybot.dev/api/meow", function(data) {
+          $("#meowmeow").text(data.message);
+        }).fail(function() {
+          $("#meowmeow").text("meow meow meow");
+        })
+      })
+    </script>
 </div>
 </div>
 </body>
