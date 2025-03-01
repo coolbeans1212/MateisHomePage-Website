@@ -171,7 +171,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             die('An error occurred while trying to sign up and it\'s probably my fault: ' . $mysqli->error . ' <a href=""><strong>Click here to retry.</strong></a>');
         }
     } else {
-        $error = $isUsernameValid !== 200 ? $isUsernameValid : $isPasswordValid;
+        if ($isUsernameValid !== 200) {
+            $error = $isUsernameValid;
+        } elseif ($isPasswordValid !== 200) {
+            $error = $isPasswordValid;
+        } elseif ($isIpValid !== 200) {
+            $error = $isIpValid;
+        } else {
+            $error = "an unknown error occurred.";
+        }
         echo 'An error occurred while trying to sign up and it\'s probably your fault: ' . $error . ' <a href=""><strong>Click here to retry.</strong></a>';
     }
 }
