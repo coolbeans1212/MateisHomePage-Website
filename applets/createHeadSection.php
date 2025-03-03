@@ -1,6 +1,6 @@
 <?php
 
-function createHeadSection($title = 'MateisHomePage', $og_title = 'Mateis\' super duper awesome website!', $og_description = 'My super duper awesome website made in the best programming language, PHP. PHP is objectively the programming language. Learn it. Now.') {
+function createHeadSection($title = 'Matei\'s Home Page', $og_title = 'Mateis\' super duper awesome website!', $og_description = 'My super duper awesome website made in the best programming language, PHP. PHP is objectively the programming language. Learn it. Now.') {
     echo '<meta charset="UTF-8">';
     echo '<link rel="icon" href="/favicon.ico" type="image/x-icon">';
     echo '<title>' . $title  . '</title>';
