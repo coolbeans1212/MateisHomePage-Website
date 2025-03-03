@@ -1,6 +1,7 @@
-<?php //this is the page that https://eatmoreram.com redirects to
-$mysqli = require_once __DIR__ . "/db.php";
+<?php //this is the page that eatmoreram.com redirects to
 session_start();
+include_once __DIR__ . "/account/checkAccountIsModerated.php";
+$mysqli = require __DIR__ . "/db.php";
 if (isset($_SESSION["user_id"])) {
   $sql = "SELECT username FROM users WHERE id = {$_SESSION["user_id"]}";
   $result = $mysqli->query($sql);
@@ -11,15 +12,11 @@ if (isset($_SESSION["user_id"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>Matei's Homepage!</title>
-  <meta content="EAT. MORE. RAM." property="og:title" />
-  <meta content="eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram" property="og:description" />
-  <meta content="https://mateishome.page" property="og:url" />
-  <meta content="https://mateishome.page/welcome.gif" property="og:image" />
-  <meta content="#24589E" data-react-helmet="true" name="theme-color" />
-  <?php include_once __DIR__ . "/applets/style.php";?></head>
+  <?php
+  require_once __DIR__ . "/applets/createHeadSection.php";
+  createHeadSection('EAT. MORE. RAM.', 'EAT. MORE. RAM.', 'eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram eat more ram ');
+  ?>
+</head>
 <body>
 <script>
 if ( window !== window.parent )

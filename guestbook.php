@@ -1,14 +1,12 @@
 <?php
-$mysqli = require __DIR__ . "/db.php";
 session_start();
+include_once __DIR__ . "/account/checkAccountIsModerated.php";
+$mysqli = require __DIR__ . "/db.php";
 if (isset($_SESSION["user_id"])) {
   $sql = "SELECT username FROM users WHERE id = {$_SESSION["user_id"]}";
   $result = $mysqli->query($sql);
   $user = $result->fetch_assoc();
 }
-
-session_start();
-$mysqli = require __DIR__ . "/db.php";
 
 // Get the client's IP address
 if (array_key_exists('HTTP_CF_CONNECTING_IP', $_SERVER)) {
@@ -24,15 +22,11 @@ if (array_key_exists('HTTP_CF_CONNECTING_IP', $_SERVER)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>Matei's Homepage!</title>
-  <meta content="a cool website all about me, Matei!" property="og:title" />
-  <meta content="my website coded with HTML (html is awesome) and CSS (css is awesome) and with PHP (i love recursive acronyms). one secon gotta be SEO: Matei's Home Page Matei'sHomePage MateisHomePage" property="og:description" />
-  <meta content="https://mateishome.page" property="og:url" />
-  <meta content="https://mateishome.page/welcome.gif" property="og:image" />
-  <meta content="#24589E" data-react-helmet="true" name="theme-color" />
-  <?php include_once __DIR__ . "/applets/style.php";?></head>
+  <?php
+  require_once __DIR__ . "/applets/createHeadSection.php";
+  createHeadSection('The Awesome Guestbook', 'The Awesome Guestbook', 'The awesome guestbook page. Anyone can post anything* here!!! :D (*don\'t be mean though)');
+  ?>
+</head>
 <body>
 <script>
 if ( window !== window.parent )

@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../db.php';
-session_start();
+require __DIR__ . '/../db.php';
+//no session_start(), make sure you include this file after session_start() in your main file
 $currentTime = date('Y-m-d H:i:s', time());
 if (isset($_SESSION["user_id"])) {
     $sql = "SELECT id FROM users WHERE id = {$_SESSION["user_id"]}";

@@ -1,6 +1,7 @@
 <?php
-$mysqli = require_once __DIR__ . "/db.php";
 session_start();
+include_once __DIR__ . "/account/checkAccountIsModerated.php";
+$mysqli = require __DIR__ . "/db.php";
 if (isset($_SESSION["user_id"])) {
   $sql = "SELECT username FROM users WHERE id = {$_SESSION["user_id"]}";
   $result = $mysqli->query($sql);
@@ -11,7 +12,9 @@ if (isset($_SESSION["user_id"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php include_once __DIR__ .  '/applets/createHeadSection.php'; createHeadSection(); ?>
+  <?php include_once __DIR__ .  '/applets/createHeadSection.php';
+  createHeadSection();
+  ?>
 <body>
 <script>
 if ( window !== window.parent )

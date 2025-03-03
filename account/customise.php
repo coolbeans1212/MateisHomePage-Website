@@ -1,5 +1,6 @@
 <?php
-$mysqli = require_once "/var/www/html/db.php";
+include_once __DIR__ . "/../account/checkAccountIsModerated.php";
+$mysqli = require __DIR__ . "/../db.php";
 session_start();
 if (isset($_SESSION["user_id"])) {
   $sql = "SELECT * FROM users WHERE id = {$_SESSION["user_id"]}";
@@ -13,15 +14,11 @@ if (isset($_SESSION["user_id"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>Matei's Homepage!</title>
-  <meta content="a cool website all about me, Matei!" property="og:title" />
-  <meta content="my website coded with HTML (html is awesome) and CSS (css is awesome) and with PHP (i love recursive acronyms). one secon gotta be SEO: Matei's Home Page Matei'sHomePage MateisHomePage" property="og:description" />
-  <meta content="https://mateishome.page" property="og:url" />
-  <meta content="https://mateishome.page/welcome.gif" property="og:image" />
-  <meta content="#24589E" data-react-helmet="true" name="theme-color" />
-  <?php include_once __DIR__ . "/../applets/style.php";?></head>
+  <?php
+  require_once __DIR__ . "/../applets/createHeadSection.php";
+  createHeadSection('Customise your profile', 'Customise your MateisHomePage user account', 'You can change your profile?! And it will make you look not like a spam account?! Sign me up!!!');
+  ?>
+</head>
 <body>
 <script>
 if ( window !== window.parent )
@@ -49,7 +46,7 @@ include_once __DIR__ . "/../applets/navigation_bar.php"; // :3
         }
         ?>" alt="Your profile">
         <div>
-            <form action="customisationProcessing.php" method="GET">
+            <form action="customisationProcessing.php" method="GET" style="margin-bottom: 0px;">
                 <label for="pfp">ROBLOX Image ID:</label><br>
                 <input type="text" id="image" name="image" value="<?php echo $user['pfp'] ?>"><br>
                 <input type="hidden" name="type" id="type" value="profileImage">
