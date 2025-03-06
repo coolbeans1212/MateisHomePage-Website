@@ -141,14 +141,22 @@
     display: block;
     font-size: 24%;
   }
+  .pfpLarge, .pfpSmall {
+    background: #00000055;
+    border: black;
+    border-style: solid;
+  }
   .pfpLarge {
     width: 200px;
     height: 200px;
-    background: #00000055;
     border-radius: 10px;
-    border: black;
-    border-style: solid;
     border-width: 5px;
+  }
+  .pfpSmall {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border-width: 2px;
   }
   .photographyPreview {
     width: 100px;
