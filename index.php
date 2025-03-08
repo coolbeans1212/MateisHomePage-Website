@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once __DIR__ . "/account/checkAccountIsModerated.php";
+include_once __DIR__ . "/api/internalFunctions.php";
 $mysqli = require __DIR__ . "/db.php";
 if (isset($_SESSION["user_id"])) {
   $sql = "SELECT username FROM users WHERE id = {$_SESSION["user_id"]}";
@@ -42,29 +43,36 @@ if (window.location.href == 'https://eatmoreram.com/') {
   ?>
   <br>
   <div class="largeApplet">
-    <h1><span id="datetime">Good day, </span>
-      <script defer>
-        // Will get the current time for the user and greet them based on it.
-        var now = new Date();
-        var hour = now.getHours();
-        console.log(hour);
-        if (hour >= 17) {
-          document.getElementById('datetime').innerHTML = 'Good evening, ';
-        } else if (hour >= 12) {
-          document.getElementById('datetime').innerHTML = 'Good afternoon, ';
-        } else {
-          document.getElementById('datetime').innerHTML = 'Good morning, ';
-        }
-      </script>
-    <?php
-    // Will add on the username of the current logged in user to the greeting or 'guest'.
-    if ($user) {
-      echo $user['username'] . '.';
-    } else {
-      echo 'guest.';
-    }
-    ?>
-    </h1>
+    <div style="display: flex; justify-content: space-between; height: 47px;">
+      <h1><span id="datetime">Good day, </span>
+        <script defer>
+          // Will get the current time for the user and greet them based on it.
+          var now = new Date();
+          var hour = now.getHours();
+          console.log(hour);
+          if (hour >= 17) {
+            document.getElementById('datetime').innerHTML = 'Good evening, ';
+          } else if (hour >= 12) {
+            document.getElementById('datetime').innerHTML = 'Good afternoon, ';
+          } else {
+            document.getElementById('datetime').innerHTML = 'Good morning, ';
+          }
+        </script>
+      <?php
+      // Will add on the username of the current logged in user to the greeting or 'guest'.
+      if ($user) {
+        echo $user['username'] . '.';
+      } else {
+        echo 'guest.';
+      }
+      ?>
+      </h1>
+      <?php if ($user): ?>
+      <a href="/account/customise.php">
+      <img src="<?php echo getPfpFromUsername($user['username']); ?>" alt="User profile. Click to customise your user account." class="pfpSmall" style="position: relative; bottom: 10px; left: 10px;">
+      </a>
+      <?php endif; ?>
+    </div>
     Welcome to my website! This page was redesigned in December 2024 for it's 1 year anniversary (the website was made 09/12/2023) so that it looked actually good. I tried to make it look like
     it was from ~2005 because I think websites from that era look super awesome, but I promise I could make a modern website if I tried.
     <h2>A bit about myself & the website.</h2>
