@@ -153,8 +153,8 @@
     border-width: 5px;
   }
   .pfpSmall {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     border-radius: 5px;
     border-width: 2px;
   }
