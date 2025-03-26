@@ -196,7 +196,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function() {
-        $.getJSON("https://garybot.dev/api/meow", function(data) {
+        $.getJSON("https://mateishome.page/api/misc/GetGBMessage.php", function(data) {
           $("#meowmeow").text(data.message);
         }).fail(function() {
           $("#meowmeow").text("meow meow meow");
