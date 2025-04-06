@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 0); //so that php doesnt show my roblosecurity cookie
+ini_set('display_startup_errors', 0);
 require_once __DIR__ . "/../vendor/autoload.php";
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
@@ -12,7 +14,7 @@ if ($id > 500) {
     $client = new Client([
         'http_errors' => false,
         'headers' => [
-            'Cookie' => '.ROBLOSECURITY=' . file_get_contents('/etc/apache2/keys/ROBLOX') . ';',
+            'Cookie' => '.ROBLOSECURITY=' . trim(file_get_contents('/etc/apache2/keys/ROBLOX')) . ';',
             'Accept' => '*/*',
         ],
         'allow_redirects' => true,

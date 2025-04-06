@@ -1,5 +1,6 @@
 <?php
 include_once __DIR__ . "/../account/checkAccountIsModerated.php";
+include_once __DIR__ . "/../api/internalFunctions.php";
 $mysqli = require __DIR__ . "/../db.php";
 session_start();
 if (isset($_SESSION["user_id"])) {
@@ -35,16 +36,7 @@ include_once __DIR__ . "/../applets/navigation_bar.php"; // :3
 <br>
     <div class="largeApplet" style="display: flex;">
         <div style="text-align: center;">
-        <img onerror="this.onerror=null; this.src='/files/images/pfps/error.png'" class="pfpLarge" src="
-        <?php
-        if (isset($user['pfp']) && $user['pfp'] > 100) {
-            echo 'https://assetdelivery.roblox.com/v1/asset/?id=' . htmlspecialchars($user['pfp']);
-        } elseif ($user['pfp'] < 100) {
-            echo '/files/images/pfps/' . htmlspecialchars($user['pfp']) . '.png';
-        } else {
-            echo '/files/images/pfps/error.png';
-        }
-        ?>" alt="Your profile">
+        <img class="pfpLarge" src="<?php echo getPfpFromUsername($user['username']) ?>" alt="Your profile">
         <div>
             <form action="customisationProcessing.php" method="GET" style="margin-bottom: 0px;">
                 <label for="pfp">ROBLOX Image ID:</label><br>

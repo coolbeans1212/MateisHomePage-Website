@@ -7,13 +7,7 @@ function getPfpFromUsername($username) {
     $stmt->execute();
     $result = $stmt->get_result();
     $pfp = $result->fetch_assoc();
-    if (isset($pfp['pfp']) && $pfp['pfp'] > 100) {
-        return 'https://assetdelivery.roblox.com/v1/asset/?id=' . htmlspecialchars($pfp['pfp']);
-    } elseif ($pfp['pfp'] < 100) {
-        return '/files/images/pfps/' . htmlspecialchars($pfp['pfp']) . '.png';
-    } else {
-        return '/files/images/pfps/error.png';
-    }
+    return 'https://mateishome.page/applets/imgproxy.php?id=' . $pfp['pfp'];
 }
 
 function isUserModerated($userID) {
