@@ -12,4 +12,3 @@ function createHeadSection($title = 'Matei\'s Home Page', $og_title = 'Mateis\' 
     include_once __DIR__ . "/style.php";
 }
 
-?>

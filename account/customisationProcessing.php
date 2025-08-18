@@ -5,6 +5,13 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 require_once '/var/www/html/db.php';
+
+session_set_cookie_params([
+    'secure' => true,
+    'httponly' => true,
+    'samesite' => 'None'
+]);
+ini_set('session.cookie_domain', '.mateishome.page');
 session_start();
 
 if (!isset($_SESSION["user_id"])) {

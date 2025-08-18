@@ -1,5 +1,12 @@
 <?php
 $mysqli = require_once __DIR__ . "/db.php";
+
+session_set_cookie_params([
+    'secure' => true,
+    'httponly' => true,
+    'samesite' => 'None'
+]);
+ini_set('session.cookie_domain', '.mateishome.page');
 session_start();
 if (isset($_SESSION["user_id"])) {
   $sql = "SELECT username FROM users WHERE id = {$_SESSION["user_id"]}";

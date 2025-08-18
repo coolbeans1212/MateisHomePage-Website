@@ -56,6 +56,8 @@
   </div>
   <div class="headerReactiveText" id="headerReactiveText">
   <?php
+
+ini_set('session.cookie_domain', '.mateishome.page');
   session_start();
   $mysqli = require "/var/www/html/db.php";
   if (isset($_SESSION["user_id"])) { //yeah thats right. even the HEADER has to have a database connection. take that

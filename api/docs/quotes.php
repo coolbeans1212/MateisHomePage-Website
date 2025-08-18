@@ -1,4 +1,11 @@
 <?php
+
+session_set_cookie_params([
+    'secure' => true,
+    'httponly' => true,
+    'samesite' => 'None'
+]);
+ini_set('session.cookie_domain', '.mateishome.page');
 session_start();
 include_once __DIR__ . "/../../account/checkAccountIsModerated.php";
 $mysqli = require __DIR__ . "/../../db.php";

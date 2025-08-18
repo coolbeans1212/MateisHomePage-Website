@@ -1,4 +1,11 @@
 <?php
+
+session_set_cookie_params([
+    'secure' => true,
+    'httponly' => true,
+    'samesite' => 'None'
+]);
+ini_set('session.cookie_domain', '.mateishome.page');
 session_start();
 include_once __DIR__ . "/account/checkAccountIsModerated.php";
 include_once __DIR__ . "/api/internalFunctions.php";
@@ -189,6 +196,15 @@ if (window.location.href == 'https://eatmoreram.com/') {
       </div>
     </div>
       </div>
+    <br>
+    <div class="largeApplet">
+      <h1>Buttons</h1>
+      <img src="/files/images/buttons/macaroni.png" alt="88x31 button. Macaroni... NOW! 3.0">
+      <img src="/files/images/buttons/despacito.gif" alt="88x31 button. Despacito... NOW!">
+      <img src="/files/images/buttons/microsoftwindows7.png" alt="88x31 button. Microsoft Windows 7... NOW!">
+      <img src="/files/images/buttons/ungoogle.png" alt="88x31 button. Ungoogle... NOW!">
+      <img src="/files/images/buttons/firefox.gif" alt="88x31 button. Firefox... NOW! New">
+    </div>
     <br>
     <div class="longApplet">
       Zach Orange sez: '<span id="meowmeow">please wait while we load the meows...</span>'

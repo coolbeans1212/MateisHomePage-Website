@@ -2,6 +2,13 @@
 include_once __DIR__ . "/../account/checkAccountIsModerated.php";
 include_once __DIR__ . "/../api/internalFunctions.php";
 $mysqli = require __DIR__ . "/../db.php";
+
+session_set_cookie_params([
+    'secure' => true,
+    'httponly' => true,
+    'samesite' => 'None'
+]);
+ini_set('session.cookie_domain', '.mateishome.page');
 session_start();
 if (isset($_SESSION["user_id"])) {
   $sql = "SELECT * FROM users WHERE id = {$_SESSION["user_id"]}";
