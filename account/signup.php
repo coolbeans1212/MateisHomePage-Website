@@ -100,6 +100,7 @@ if (array_key_exists('HTTP_CF_CONNECTING_IP', $_SERVER)) {
     $clientIP = $_SERVER['REMOTE_ADDR'];
 }
 function isPasswordValid($password, $confirmationpassword) { //runs check to see if the password is valid
+    global $error;
     if ($password != $confirmationpassword) {
         return "the passwords do not match.";
     }
@@ -142,6 +143,19 @@ function isIpValid($ip) {
     }
     return 200; //all is swell!
 }
+function isEmailValid($email) { //only checks the email if the email is not blank
+    if (empty($email)) {
+        return 200;
+    }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return "the email address is invalid.";
+    }
+    $response = file_get_contents('https://api.stopforumspam.org/api?email=' . urlencode($email));
+    if (strpos($response, '<appears>yes</appears>') !== false) {
+        return "the email address is a known spam source. Stop spamming my website! >:(";
+    }
+    return 200;
+}
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -149,8 +163,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $isPasswordValid = isPasswordValid($_POST['password'], $_POST['cpassword']);
     $isUsernameValid = isUsernameValid($_POST['username']);
     $isIpValid = isIpValid($clientIP);
+    $isEmailValid = isEmailValid($_POST['email']);
     
-    if ($isPasswordValid === 200 && $isUsernameValid === 200 && $isIpValid === 200) {
+    if ($isPasswordValid === 200 && $isUsernameValid === 200 && $isIpValid === 200 && $isEmailValid === 200) {
         $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT); //securidad
         require '/var/www/html/db.php'; //require_once fails for some reason? i have no idea why, please make pr if you know
         
@@ -181,8 +196,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $error = $isPasswordValid;
         } elseif ($isIpValid !== 200) {
             $error = $isIpValid;
+        } elseif ($isEmailValid !== 200) {
+            $error = $isEmailValid;
         } else {
-            $error = "an unknown error occurred.";
+            $error = "An unknown error occurred.";
         }
         echo 'An error occurred while trying to sign up and it\'s probably your fault: ' . $error . ' <a href=""><strong>Click here to retry.</strong></a>';
     }
