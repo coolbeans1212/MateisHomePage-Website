@@ -121,7 +121,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
       $memory_parts = preg_split('/\s+/', trim($important_line)); //more weird regex
       $memory_parts[3] = intdiv($memory_parts[3], 1024);
       $memory_parts[1] = intdiv($memory_parts[1], 1024);
-      echo $memory_parts[3] . 'K / ' . $memory_parts[1] . 'K (' . intdiv($memory_parts[3] * 100, $memory_parts[1]) . '%)';
+      echo $memory_parts[3] . 'M / ' . $memory_parts[1] . 'M (' . intdiv($memory_parts[3] * 100, $memory_parts[1]) . '%)';
       ?><br>
       Storage:
       <?php
@@ -133,7 +133,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
       $totaldisk = $thedisk[4] + $thedisk[3];
       $thedisk[4] = intdiv($thedisk[4], 1024);
       $totaldisk = intdiv($totaldisk, 1024);
-      echo $thedisk[4] . 'K / ' . $totaldisk . 'K (' . $thedisk[5] . ')';
+      echo $thedisk[4] . 'M / ' . $totaldisk . 'M (' . $thedisk[5] . ')';
       ?>
     </div>
     <div class="smallApplet" style="background: url('/files/images/daily_quote_applet_background.png') no-repeat 0px 0px; background-size: cover;">
