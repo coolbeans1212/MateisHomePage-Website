@@ -233,7 +233,14 @@
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  <?php if ($_GET['rainbow'] == true): ?>
+  .shaded {
+    display: block;
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+  }
+  <?php if ($_GET['rainbow']): ?>
   @keyframes colorAnimation {
     0% { color: red; }
     10% { color: orangered; }

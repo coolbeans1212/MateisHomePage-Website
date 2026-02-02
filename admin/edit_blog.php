@@ -22,7 +22,7 @@ if (!$user['admin']) {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <title>Matei's Homepage!</title>
   <meta content="a cool website all about me, Matei!" property="og:title" />
   <meta content="my website coded with HTML (html is awesome) and CSS (css is awesome) and with PHP (i love recursive acronyms). one secon gotta be SEO: Matei's Home Page Matei'sHomePage MateisHomePage" property="og:description" />
@@ -45,9 +45,17 @@ if ( window !== window.parent )
     ?>
     <br>
     <div class="largeApplet">
-        <h1><oblique>edit a blog post.</oblique></h1>
+        <h1><oblique>manage blog posts.</oblique></h1>
         <?php
-        if ($_GET['id']) {
+        if ($_GET['id'] == -1) {
+            $sql = "SELECT id FROM blog_entries ORDER BY id DESC LIMIT 1";
+            $result = $mysqli->query($sql);
+            $latestId = $result->fetch_assoc();
+            ?>
+            <form>Crafting a new blog post with id <?php echo $latestId['id'] + 1; ?>.</form>
+            <input type="hidden" id="id" name="id" value="<?php echo $latestId['id'] + 1;?>"></input>
+        <?php
+        } elseif ($_GET['id']) {
             $sql = "SELECT * FROM blog_entries WHERE id = ?";
             $stmt = $mysqli->prepare($sql);
             $stmt->bind_param('i', $_GET['id']);
@@ -56,7 +64,7 @@ if ( window !== window.parent )
             $blogs = $blogs->fetch_assoc();
             if ($blogs) {
                 echo '<form> Editting blog with id ' . $blogs['id'] . ', published ' . $blogs['date'] . '.<br>';
-                echo '<input type="hidden" id="id" name="id"></input>';
+                echo '<input type="hidden" id="id" name="id" value="' . $blogs['id'] . '"></input>';
                 echo '<label for="title">Title: </label>';
                 echo '<input type="text" id="title" name="title" value="' . $blogs['title'] . '"><br>';
                 echo '<input type="submit" value="Submit">';
@@ -66,17 +74,26 @@ if ( window !== window.parent )
             }
             print_r($blogs);
         } else {
-            echo '<form>';
-            echo '<label for="id">ID: </label>';
-            echo '<input type="number" id="id" name="id" step="1" min="1"><br>';
-            echo '<input type="submit" value="Submit">';
-            echo '</form>';
+            echo '<p>select a blog post to edit or write a new one.</p>';
+            echo '<a class="shaded" href="?id=-1"><h2>✎ new blog post!</h2>id X, where X is a real number from 0-65535, crafted by YOU, today!</a>';
+            $sql = "SELECT id,title,author,date FROM blog_entries ORDER BY id DESC";
+            $result = $mysqli->query($sql);
+            $blogs = $result->fetch_all();
+            foreach ($blogs as $blog) {
+                echo '<a class="shaded" href="?id=' . $blog[0] . '"><h2>' . $blog[1] . '</h2>id ' . $blog[0] . ', crafted by ' . $blog[2] . ' on ' . $blog[3] . '.</a>'; // my english teacher loves to say craft instead of create/write.
+            }
         }
         ?>
     </div>
     <br>
     <div class="longApplet">
         <h1>Preview Window:</h1>
+        <?php if (!$_GET['id']): ?>
+            A preview will appear here after you select a blog post.
+        <?php else: ?>
+            <h2>postTitle</h2>
+            <span>postBody</span>
+        <?php endif; ?>
     </div>
 </div>
 </body>
