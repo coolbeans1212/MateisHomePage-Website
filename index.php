@@ -158,6 +158,20 @@ if (window.location.href == 'https://eatmoreram.com/') {
   <br>
   <?php endif; ?>
   <div class="largeApplet">
+    <h1>Buttons</h1>
+    <a href="https://mateishome.page/"><img class="button" src="/files/images/buttons/mateishomepage.png" alt="88x31 button. MateisHomePage Technologies."></a>
+    <a href="https://gideon.sh/"><img class="button" src="/files/images/buttons/gideon.gif" alt="88x31 button. Gideon."></a>
+    <a href="https://sundial.city/"><img class="button" src="/files/images/buttons/sundialcity.gif" alt="88x31 button. Bunnyguy."></a>
+    <a href="https://phthallo.com/"><img class="button" src="/files/images/buttons/phthallo.png" alt="88x31 button. Phthallo."></a>
+    <a href="https://addy10s.xyz"><img class="button" src="/files/images/buttons/addy88x31.png" alt="88x31 button. Addy."></a>
+    <img class="button" src="/files/images/buttons/macaroni.png" alt="88x31 button. Macaroni... NOW! 3.0">
+    <img class="button" src="/files/images/buttons/despacito.gif" alt="88x31 button. Despacito... NOW!">
+    <img class="button" src="/files/images/buttons/microsoftwindows7.png" alt="88x31 button. Microsoft Windows 7... NOW!">
+    <img class="button" src="/files/images/buttons/ungoogle.png" alt="88x31 button. Ungoogle... NOW!">
+    <img class="button" src="/files/images/buttons/firefox.gif" alt="88x31 button. Firefox... NOW! New">
+  </div>
+  <br>
+  <div class="largeApplet">
     <h1>Quick Links</h1>
     <div class="appletContainer">
       <div style="width: 25%;">
@@ -200,15 +214,6 @@ if (window.location.href == 'https://eatmoreram.com/') {
       </div>
     </div>
       </div>
-    <br>
-    <div class="largeApplet">
-      <h1>Buttons</h1>
-      <img src="/files/images/buttons/macaroni.png" alt="88x31 button. Macaroni... NOW! 3.0">
-      <img src="/files/images/buttons/despacito.gif" alt="88x31 button. Despacito... NOW!">
-      <img src="/files/images/buttons/microsoftwindows7.png" alt="88x31 button. Microsoft Windows 7... NOW!">
-      <img src="/files/images/buttons/ungoogle.png" alt="88x31 button. Ungoogle... NOW!">
-      <img src="/files/images/buttons/firefox.gif" alt="88x31 button. Firefox... NOW! New">
-    </div>
     <br>
     <div class="longApplet">
       Zach Orange sez: '<span id="meowmeow">please wait while we load the meows...</span>'

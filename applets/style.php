@@ -240,6 +240,9 @@
     padding: 5px;
     margin: 5px;
   }
+  .button {
+    image-rendering: pixelated;
+  }
   <?php if ($_GET['rainbow']): ?>
   @keyframes colorAnimation {
     0% { color: red; }
