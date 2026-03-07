@@ -51,10 +51,8 @@ if ( window !== window.parent )
             $sql = "SELECT id FROM blog_entries ORDER BY id DESC LIMIT 1";
             $result = $mysqli->query($sql);
             $latestId = $result->fetch_assoc();
-            ?>
-            <form>Crafting a new blog post with id <?php echo $latestId['id'] + 1; ?>.</form>
-            <input type="hidden" id="id" name="id" value="<?php echo $latestId['id'] + 1;?>"></input>
-        <?php
+            $latestId = $latestId['id'] + 1;
+            $blogs = ['id' => $latestId, 'title' => '', 'body' => '', 'date' => date('Y-m-d'), 'visibility' => 'public', 'author' => $user['username'], 'edited' => false];
         } elseif ($_GET['id']) {
             $sql = "SELECT * FROM blog_entries WHERE id = ?";
             $stmt = $mysqli->prepare($sql);
@@ -62,17 +60,6 @@ if ( window !== window.parent )
             $stmt->execute();
             $blogs = $stmt->get_result();
             $blogs = $blogs->fetch_assoc();
-            if ($blogs) {
-                echo '<form> Editting blog with id ' . $blogs['id'] . ', published ' . $blogs['date'] . '.<br>';
-                echo '<input type="hidden" id="id" name="id" value="' . $blogs['id'] . '"></input>';
-                echo '<label for="title">Title: </label>';
-                echo '<input type="text" id="title" name="title" value="' . $blogs['title'] . '"><br>';
-                echo '<input type="submit" value="Submit">';
-                echo '</form>';
-            } else {
-                echo '<script>parent.self.location=\'edit_blog.php\';</script>';
-            }
-            print_r($blogs);
         } else {
             echo '<p>select a blog post to edit or write a new one.</p>';
             echo '<a class="shaded" href="?id=-1"><h2>✎ new blog post!</h2>id X, where X is a real number from 0-65535, crafted by YOU, today!</a>';
@@ -82,6 +69,22 @@ if ( window !== window.parent )
             foreach ($blogs as $blog) {
                 echo '<a class="shaded" href="?id=' . $blog[0] . '"><h2>' . $blog[1] . '</h2>id ' . $blog[0] . ', crafted by ' . $blog[2] . ' on ' . $blog[3] . '.</a>'; // my english teacher loves to say craft instead of create/write.
             }
+        }
+        if ($blogs) {
+            if ($latestId) {
+                ?><form>Crafting a new blog post with id <?php echo $blogs['id']; ?>.<?php
+            } else {
+                ?><form> Editting blog with id <?php echo $blogs['id'];?>, published <?php echo $blogs['date'];?>.<?php
+            }?>
+            <br>
+            <input type="hidden" id="id" name="id" value="<?php echo $blogs['id'];?>"></input>
+            <label for="title">Title: </label>
+            <input type="text" id="title" name="title" value="<?php echo $blogs['title'];?>"><br>
+            <textarea id="body" name="body"><?php echo htmlspecialchars($blogs['body']);?></textarea><br>
+            <input type="submit" value="Submit">
+            </form><?php
+        } else {
+            echo '<script>parent.self.location=\'edit_blog.php\';</script>';
         }
         ?>
     </div>
