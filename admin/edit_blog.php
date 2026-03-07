@@ -15,6 +15,7 @@ if (isset($_SESSION["user_id"])) {
 }
 if (!$user['admin']) {
     header("Location: /");
+    die();
 }
 ?>
 
@@ -72,7 +73,7 @@ if ( window !== window.parent )
         }
         if ($_GET['id']) {
             if ($latestId) {
-                ?><form>Crafting a new blog post with id <?php echo $blogs['id']; ?>.<?php
+                ?><form method="POST">Crafting a new blog post with id <?php echo $blogs['id']; ?>.<?php
             } else {
                 ?><form> Editting blog with id <?php echo $blogs['id'];?>, published <?php echo $blogs['date'];?>.<?php
             }?>
@@ -102,11 +103,13 @@ if ( window !== window.parent )
                 const bodyInput = document.getElementById('body');
                 const titleOutput = document.getElementById('titlePreview');
                 const bodyOutput = document.getElementById('bodyPreview');
+                titleOutput.innerHTML = titleInput.value != '' ? titleInput.value : 'Title'; // IF titleInput has a value THEN the value is innerHTML of output
+                bodyOutput.innerHTML = bodyInput.value != '' ? bodyInput.value : 'Body';
                 titleInput.addEventListener('input', (event) => {
-                    titleOutput.innerHTML = event.target.value;
+                    titleOutput.innerHTML = titleInput.value != '' ? titleInput.value : 'Title';
                 });
                 bodyInput.addEventListener('input', (event) => {
-                    bodyOutput.innerHTML = event.target.value;
+                    bodyOutput.innerHTML = bodyInput.value != '' ? bodyInput.value : 'Body';
                 });
             </script>
         <?php endif; ?>
