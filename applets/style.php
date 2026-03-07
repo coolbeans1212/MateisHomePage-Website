@@ -192,7 +192,7 @@
     color: #ffffff;
     height: 25px;
   }
-  input[type="submit"] {
+  input[type="submit"], button {
     border: 1px solid;
     border-radius: 5px;
     background: #131415;
@@ -233,7 +233,21 @@
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  <?php if ($_GET['rainbow'] == true): ?>
+  .shaded {
+    display: block;
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+  }
+  .button {
+    image-rendering: pixelated;
+  }
+  .flex-space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  <?php if ($_GET['rainbow']): ?>
   @keyframes colorAnimation {
     0% { color: red; }
     10% { color: orangered; }
