@@ -192,7 +192,7 @@
     color: #ffffff;
     height: 25px;
   }
-  input[type="submit"] {
+  input[type="submit"], button {
     border: 1px solid;
     border-radius: 5px;
     background: #131415;
@@ -242,6 +242,10 @@
   }
   .button {
     image-rendering: pixelated;
+  }
+  .flex-space-between {
+    display: flex;
+    justify-content: space-between;
   }
   <?php if ($_GET['rainbow']): ?>
   @keyframes colorAnimation {

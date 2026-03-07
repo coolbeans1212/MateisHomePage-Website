@@ -70,7 +70,7 @@ if ( window !== window.parent )
                 echo '<a class="shaded" href="?id=' . $blog[0] . '"><h2>' . $blog[1] . '</h2>id ' . $blog[0] . ', crafted by ' . $blog[2] . ' on ' . $blog[3] . '.</a>'; // my english teacher loves to say craft instead of create/write.
             }
         }
-        if ($blogs) {
+        if ($_GET['id']) {
             if ($latestId) {
                 ?><form>Crafting a new blog post with id <?php echo $blogs['id']; ?>.<?php
             } else {
@@ -81,10 +81,11 @@ if ( window !== window.parent )
             <label for="title">Title: </label>
             <input type="text" id="title" name="title" value="<?php echo $blogs['title'];?>"><br>
             <textarea id="body" name="body"><?php echo htmlspecialchars($blogs['body']);?></textarea><br>
-            <input type="submit" value="Submit">
+            <div class="flex-space-between">
+                <a href="/admin/edit_blog.php"><button type="button">Cancel</button></a>
+                <input type="submit" value="Submit">
+            </div>
             </form><?php
-        } else {
-            echo '<script>parent.self.location=\'edit_blog.php\';</script>';
         }
         ?>
     </div>
@@ -94,8 +95,20 @@ if ( window !== window.parent )
         <?php if (!$_GET['id']): ?>
             A preview will appear here after you select a blog post.
         <?php else: ?>
-            <h2>postTitle</h2>
-            <span>postBody</span>
+            <h2 id="titlePreview">postTitle</h2>
+            <span id="bodyPreview">postBody</span>
+            <script>
+                const titleInput = document.getElementById('title');
+                const bodyInput = document.getElementById('body');
+                const titleOutput = document.getElementById('titlePreview');
+                const bodyOutput = document.getElementById('bodyPreview');
+                titleInput.addEventListener('input', (event) => {
+                    titleOutput.innerHTML = event.target.value;
+                });
+                bodyInput.addEventListener('input', (event) => {
+                    bodyOutput.innerHTML = event.target.value;
+                });
+            </script>
         <?php endif; ?>
     </div>
 </div>
