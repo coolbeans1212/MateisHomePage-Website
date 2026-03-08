@@ -119,9 +119,9 @@ if (window.location.href == 'https://eatmoreram.com/') {
       //black magic dont touch
       $important_line = $freemem2[1];
       $memory_parts = preg_split('/\s+/', trim($important_line)); //more weird regex
-      $memory_parts[3] = intdiv($memory_parts[3], 1024);
+      $memory_parts[2] = intdiv($memory_parts[2], 1024);
       $memory_parts[1] = intdiv($memory_parts[1], 1024);
-      echo $memory_parts[3] . 'M / ' . $memory_parts[1] . 'M (' . intdiv($memory_parts[3] * 100, $memory_parts[1]) . '%)';
+      echo $memory_parts[2] . 'M / ' . $memory_parts[1] . 'M (' . intdiv($memory_parts[2] * 100, $memory_parts[1]) . '%)';
       ?><br>
       Storage:
       <?php
