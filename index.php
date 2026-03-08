@@ -68,7 +68,14 @@ if (window.location.href == 'https://eatmoreram.com/') {
       <?php
       // Will add on the username of the current logged in user to the greeting or 'guest'.
       if ($user) {
-        echo $user['username'] . '.';
+        if ($user['admin'] == 1) {
+          echo '<a href="/admin">';
+        }
+        echo $user['username'];
+        if ($user['admin'] == 1) {
+          echo '</a>';
+        }
+        echo '.';
       } else {
         echo 'guest.';
       }
