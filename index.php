@@ -164,7 +164,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
     <a href="https://gideon.sh/"><img class="button" src="/files/images/buttons/gideon.gif" alt="88x31 button. Gideon."></a>
     <a href="https://sundial.city/"><img class="button" src="/files/images/buttons/sundialcity.gif" alt="88x31 button. Bunnyguy."></a>
     <a href="https://phthallo.com/"><img class="button" src="/files/images/buttons/phthallo.png" alt="88x31 button. Phthallo."></a>
-    <a href="https://addy10s.xyz/"><img class="button" src="/files/images/buttons/addy88x31.png" alt="88x31 button. Addy."></a>
+    <a href="https://addy10s.xyz/"><img class="button" src="/files/images/buttons/addy88x31.gif" alt="88x31 button. Addy."></a>
     <a href="https://www.dwait.dev/"><img class="button" src="/files/images/buttons/gamerwaves.jpg" alt="88x31 button. Gamer_waves."></a>
     <img class="button" src="/files/images/buttons/macaroni.png" alt="88x31 button. Macaroni... NOW! 3.0">
     <img class="button" src="/files/images/buttons/despacito.gif" alt="88x31 button. Despacito... NOW!">
