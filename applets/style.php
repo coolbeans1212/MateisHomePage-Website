@@ -192,14 +192,16 @@
     color: #ffffff;
     height: 25px;
   }
-  input[type="submit"], button {
+  input[type="submit"], button, select {
     border: 1px solid;
     border-radius: 5px;
     background: #131415;
     color: #ffffff;
     height: 30px;
-    margin: 5px;
     cursor: pointer;
+  }
+  input[type="submit"], button {
+    margin: 5px;
   }
   textarea {
     width: 98.1%; /* the magic number */
