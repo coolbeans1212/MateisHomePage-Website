@@ -47,6 +47,7 @@ if ( window !== window.parent )
     <div class="appletContainer">
       <div class="mediumApplet" style="width: 49%;">
         <h1>Admin Panel</h1>
+        <a href="/admin/edit_blog.php">Manage blog entries</a>
       </div>
       <div class="mediumApplet" style="width: 49%;">
         <h1>Inspect User</h1>

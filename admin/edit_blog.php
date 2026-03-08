@@ -63,7 +63,14 @@ if ( window !== window.parent )
     <?php
     include_once __DIR__ . "/../applets/navigation_bar.php"; // :3
     ?>
-    <br>
+    <?php if ($user['username'] != 'admin') {
+    ?>
+        <div class="warningBanner">Your account is classified as an admin, but you are not Matei. Please only edit blog posts to correct things such as unintentional spelling mistakes, dead links, or broken images.
+        <b>Only create a blog post in the event of my death or if I am seriously harmed & cannot access/use a computer.</b> If you do not follow these instructions, your admin privileges will be revoked.</div><?php
+        } else {
+            echo '<br>';
+        }
+    ?>
     <div class="largeApplet">
         <h1><oblique>manage blog posts.</oblique></h1>
         <?php
