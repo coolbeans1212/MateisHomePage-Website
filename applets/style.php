@@ -217,6 +217,19 @@
     border: none;
     border-top: 1px solid #fafbfc;
   }
+  table {
+    background: #131415;
+    border-collapse: collapse;
+  }
+  td, th {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    padding: 2px;
+  }
+  tr {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
   .warningBanner {
     background: yellow;
     margin: 10px;
