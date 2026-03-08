@@ -255,6 +255,9 @@
     padding: 5px;
     margin: 5px;
   }
+  .nounderline {
+    text-decoration: none !important;
+  }
   .button {
     image-rendering: pixelated;
   }

@@ -89,12 +89,12 @@ if ( window !== window.parent )
             $blogs = $blogs->fetch_assoc();
         } else {
             ?><p>select a blog post to edit or write a new one.</p>
-            <a class="shaded" href="?id=-1"><h2>✎ new blog post!</h2>id X, where X is a real number from 0-65535, crafted by YOU, today!</a><?php
+            <a class="shaded nounderline" href="?id=-1"><h2>✎ new blog post!</h2>id X, where X is a real number from 0-65535, crafted by YOU, today!</a><?php
             $sql = "SELECT id,title,author,date FROM blog_entries ORDER BY id DESC";
             $result = $mysqli->query($sql);
             $blogs = $result->fetch_all();
             foreach ($blogs as $blog) {
-                echo '<a class="shaded" href="?id=' . $blog[0] . '"><h2>' . $blog[1] . '</h2>id ' . $blog[0] . ', crafted by ' . $blog[2] . ' on ' . $blog[3] . '.</a>'; // my english teacher loves to say craft instead of create/write.
+                echo '<a class="shaded nounderline" href="?id=' . $blog[0] . '"><h2>' . $blog[1] . '</h2>id ' . $blog[0] . ', crafted by ' . $blog[2] . ' on ' . $blog[3] . '.</a>'; // my english teacher loves to say craft instead of create/write.
             }
         }
         if ($_GET['id']) {
