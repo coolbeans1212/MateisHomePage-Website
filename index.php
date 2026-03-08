@@ -200,7 +200,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
         <h2>Cool websites</h2>
         <a target="_blank" rel="noopener noreferrer" href="https://zakkbob.dev/">ZakksGames</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://www.is-a-furry.dev/">PlOszukiwacz's website</a><br>
-        <a target="_blank" rel="noopener noreferrer" href="https://cyteon.tech/">Cyteon's website</a><br>
+        <a target="_blank" rel="noopener noreferrer" href="https://cyteon.dev/">Cyteon's website</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://paintdev.co.uk">Paintdev's website</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://computerblade.is-a.dev/">Computerblade's website</a><br>
         <a target="_blank" rel="noopener noreferrer" href="https://aquiffoo.vercel.app/">Aquiffoo's website</a><br>
