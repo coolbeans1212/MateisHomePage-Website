@@ -113,7 +113,7 @@ if ( window !== window.parent )
             <select name="visibility" id="visibility">
                 <option value="public" <?php if ($blogs['visibility'] == 'public') {echo 'selected';}?> >Public</option>
                 <option value="admin" <?php if ($blogs['visibility'] == 'admin') {echo 'selected';}?> >Admins-only</option>
-                <option value="private" <?php if ($blogs['visibility'] == 'private') {echo 'selected';}?> >Unlisted</option>
+                <option value="private" <?php if ($blogs['visibility'] == 'private') {echo 'selected';}?> >Private</option>
             </select><br>
             <div class="flex-space-between">
                 <a href="/admin/edit_blog.php"><button type="button" id="cancel">Cancel</button></a>
