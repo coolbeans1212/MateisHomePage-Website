@@ -3,6 +3,7 @@ ini_set('display_errors', 0); //so that php doesnt show my roblosecurity cookie
 ini_set('display_startup_errors', 0);
 require_once __DIR__ . "/../vendor/autoload.php";
 use GuzzleHttp\Client;
+use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Exception\RequestException;
 
 header('Content-Type: image/png');
@@ -11,16 +12,16 @@ $LocalPfpPath = __DIR__ . '/../files/images/pfps/' . $id . '.png';
 $ErrorPfpPath = __DIR__ . '/../files/images/pfps/error.png';
 
 if ($id > 500) {
+    $jar = CookieJar::fromArray(['.ROBLOSECURITY' => trim(file_get_contents('/etc/apache2/keys/ROBLOX'))], '.roblox.com');
     $client = new Client([
         'http_errors' => false,
         'headers' => [
-            'Cookie' => '.ROBLOSECURITY=' . trim(file_get_contents('/etc/apache2/keys/ROBLOX')) . ';',
             'Accept' => '*/*',
         ],
         'allow_redirects' => true,
     ]);
     try {
-        $response = $client->request('GET', 'https://assetdelivery.roblox.com/v1/asset/?id=' . $id);
+        $response = $client->request('GET', 'https://assetdelivery.roblox.com/v1/asset/?id=' . $id, ['cookies' => $jar]);
         $body = (string)$response->getBody();
 
         if (ord($body[0]) == 0x1f && ord($body[1]) == 0x8b) { // check if body is gzipped (stolen from stackoverflow)
