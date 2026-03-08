@@ -173,6 +173,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
     <a href="https://phthallo.com/"><img class="button" src="/files/images/buttons/phthallo.png" alt="88x31 button. Phthallo."></a>
     <a href="https://addy10s.xyz/"><img class="button" src="/files/images/buttons/addy88x31.gif" alt="88x31 button. Addy."></a>
     <a href="https://www.dwait.dev/"><img class="button" src="/files/images/buttons/gamerwaves.jpg" alt="88x31 button. Gamer_waves."></a>
+    <a href="https://yaoi.tech/"><img class="button" src="/files/images/buttons/alexander.gif" alt="88x31 button. Alex."></a>
     <img class="button" src="/files/images/buttons/macaroni.png" alt="88x31 button. Macaroni... NOW! 3.0">
     <img class="button" src="/files/images/buttons/despacito.gif" alt="88x31 button. Despacito... NOW!">
     <img class="button" src="/files/images/buttons/microsoftwindows7.png" alt="88x31 button. Microsoft Windows 7... NOW!">
