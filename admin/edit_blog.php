@@ -27,7 +27,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             die();
         }
     } else {
-        $sql = "UPDATE blog_entries SET title = ?, body = ?, visibility = ?, edited = 1 WHERE id = ?";
+        if ($_POST['publish-today']) {
+            $sql = "UPDATE blog_entries SET title = ?, body = ?, visibility = ?, date = CURRENT_TIMESTAMP(), edited = 1 WHERE id = ?";
+        } else {
+            $sql = "UPDATE blog_entries SET title = ?, body = ?, visibility = ?, edited = 1 WHERE id = ?";
+        }
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param('sssi', $_POST['title'], $_POST['body'], $_POST['visibility'], $_POST['id']);
         if ($stmt->execute()) {
@@ -109,12 +113,25 @@ if ( window !== window.parent )
             <label for="title">Title: </label>
             <input type="text" id="title" name="title" value="<?php echo $blogs['title'];?>"><br>
             <textarea id="body" name="body"><?php echo htmlspecialchars($blogs['body']);?></textarea><br>
-            <label for="visibility">Visibility:</label>
-            <select name="visibility" id="visibility">
-                <option value="public" <?php if ($blogs['visibility'] == 'public') {echo 'selected';}?> >Public</option>
-                <option value="admin" <?php if ($blogs['visibility'] == 'admin') {echo 'selected';}?> >Admins-only</option>
-                <option value="private" <?php if ($blogs['visibility'] == 'private') {echo 'selected';}?> >Private</option>
-            </select><br>
+            <div class="flex-space-between">
+                <div>
+                    <label for="visibility">Visibility:</label>
+                    <select name="visibility" id="visibility">
+                        <option value="public" <?php if ($blogs['visibility'] == 'public') {echo 'selected';}?> style="color: red; font-weight: bold;" >Public</option>
+                        <option value="admin" <?php if ($blogs['visibility'] == 'admin') {echo 'selected';}?> >Admins-only</option>
+                        <option value="private" <?php if ($blogs['visibility'] == 'private') {echo 'selected';}?> >Private</option>
+                    </select>
+                </div>
+                <?php if (!$latestId) {
+                    ?>
+                <div>
+                    <label for="publish-today">Reset publishing date to today:</label>
+                    <input type="checkbox" name="publish-today" id="publish-today">
+                </div>
+                    <?php
+                }
+                    ?>
+            </div>
             <div class="flex-space-between">
                 <a href="/admin/edit_blog.php"><button type="button" id="cancel">Cancel</button></a>
                 <input type="submit" id="submit" value="Submit">
