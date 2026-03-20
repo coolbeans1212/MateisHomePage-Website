@@ -226,18 +226,8 @@ if (window.location.href == 'https://eatmoreram.com/') {
       </div>
     <br>
     <div class="longApplet">
-      Zach Orange sez: '<span id="meowmeow">please wait while we load the meows...</span>'
+      Zach Orange sez: '<?php $meow = ''; for($i = 0; $i <= random_int(1, 100); $i++) { $meow .= 'meow ';}  echo trim($meow); ?>'
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $.getJSON("https://mateishome.page/api/misc/GetGBMessage.php", function(data) {
-          $("#meowmeow").text(data.message);
-        }).fail(function() {
-          $("#meowmeow").text("meow meow meow");
-        })
-      })
-    </script>
 </div>
 </div>
 </body>
