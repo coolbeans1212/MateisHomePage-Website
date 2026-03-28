@@ -113,10 +113,10 @@ if (window.location.href == 'https://eatmoreram.com/') {
       <?php //get website uptime :3
       $uptime = shell_exec('cat /proc/uptime | awk \'{print int($1)}\'');
       echo floor($uptime / 86400) . ' days, ' . floor($uptime / 3600 % 24) . ' hours, ' . floor($uptime / 60 % 60) . ' minutes.';
-      ?>
+      ?><br>
       Packages installed:
       <?php //get packages installed :3
-      $packages = shell_exec('dpkg --get-selections'); //scary!
+      $packages = shell_exec('dpkg --get-selections');
       echo substr_count($packages, 'install');
       ?><br>
       System memory:

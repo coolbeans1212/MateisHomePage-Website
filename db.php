@@ -1,7 +1,7 @@
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = file_get_contents('/etc/apache2/DBPASSWORD');
+$dbpass = trim(file_get_contents('/etc/apache2/DBPASSWORD'));
 $db = 'forum';
 $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $db);
       
