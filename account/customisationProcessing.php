@@ -1,10 +1,7 @@
 <?php
 //ini_set('display_errors', 0); //so that php doesnt show my roblosecurity cookie
 //ini_set('display_startup_errors', 0);
-require_once __DIR__ . '/../vendor/autoload.php';
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
-require_once '/var/www/html/db.php';
+require_once __DIR__ . '/../db.php';
 
 session_set_cookie_params([
     'secure' => true,
@@ -41,17 +38,15 @@ function storeProfilePicture($imageId) {
         if (isset($_GET['set']) && $_GET['set'] === 'true') {
             $pfp = filter_var($imageId, FILTER_SANITIZE_NUMBER_INT);
         } else {
-            $client = new Client([
-                'http_errors' => false,
-                'headers' => [
-                    'Cookie' => '.ROBLOSECURITY=' . trim(file_get_contents('/etc/apache2/keys/ROBLOX')) . ';',
-                    'Accept' => '*/*',
-                ],
-                'allow_redirects' => true,
-            ]);
-
-            $response = $client->request('GET', 'https://assetdelivery.roblox.com/v1/asset/?id=' . $imageId);
-            $body = (string)$response->getBody();
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, 'https://assetdelivery.roblox.com/v1/asset/?id=' . $imageId);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($ch, CURLOPT_COOKIE, '.ROBLOSECURITY=' . trim(file_get_contents('/etc/apache2/keys/ROBLOX')) . ';');
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['Accept: */*']);
+            
+            $body = curl_exec($ch);
+            curl_close($ch);
 
             if (ord($body[0]) == 0x1f && ord($body[1]) == 0x8b) { // gzipped?
                 $body = gzinflate(substr($body, 10));
@@ -73,9 +68,6 @@ function storeProfilePicture($imageId) {
         $stmt->bind_param("ss", $pfp, $user['username']);
         return $stmt->execute();
 
-    } catch (RequestException $e) {
-        error_log("Guzzle error while updating PFP: " . $e->getMessage());
-        return false;
     } catch (Exception $e) {
         error_log("General error while updating PFP: " . $e->getMessage());
         return false;
@@ -111,4 +103,3 @@ if ($_GET['type'] == 'description' && $_GET['description']) {
 
 header("Location: /account/customise.php");
 exit();
-?>
