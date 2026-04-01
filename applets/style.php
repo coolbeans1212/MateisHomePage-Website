@@ -6,7 +6,7 @@
     font-size: 15px;
     line-height: 1.9em;
     background-color: #001310;
-    background-image: url(/files/images/main_site_background_image.png);
+    background-image: url(/files/images/main_site_background_image.webp);
     background-position: top center;
     background-repeat: no-repeat;
   }
