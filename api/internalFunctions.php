@@ -27,3 +27,12 @@ function isUserModerated($userID) {
 
     return false;
 }
+
+function getMHPQuote() {
+    //figure out the quote that should be selected for the day
+    $date_Interval = date_diff(date_create('2000-1-1'), date_create(date('Y-m-d')));
+    $days_Since_2000 = $date_Interval->days; //php isnt playing ball
+    $awesomeSauceArray = json_decode(file_get_contents('/var/www/html/quotes.json'));
+    //echo teh awesome quote :D
+    return $awesomeSauceArray[$days_Since_2000 % count($awesomeSauceArray)];
+}

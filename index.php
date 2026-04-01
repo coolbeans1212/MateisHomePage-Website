@@ -148,7 +148,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
       <?php
       echo date('F jS, Y') . '\'s quote is:<br>\'';
       //use the API to get the daily quote
-      echo file_get_contents('https://mateishome.page/api/getMHPQuote.php?type=plaintext') . '\'';
+      echo getMHPQuote() . '\'';
       ?>
     </div>
   </div>
