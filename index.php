@@ -33,12 +33,12 @@ $blog = $blog->fetch_assoc();
 </head>
 <body>
 <script>
-if ( window !== window.parent )
+/*if ( window !== window.parent )
 {
       window.location.replace("https://mateishome.page/dontputmeinaniframe!.html"); // The page is in an iframe
       //window.location.replace("about:inducebrowsercrashforrealz"); // EVIL The page is in an iframe
 
-}
+}*/
 
 if (window.location.href == 'https://eatmoreram.com/') {
   window.location.replace("https://eatmoreram.com/top100modureasons.php");
@@ -174,6 +174,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
     <a href="https://addy10s.xyz/"><img class="button" src="/files/images/buttons/addy88x31.gif" alt="88x31 button. Addy."></a>
     <a href="https://www.dwait.dev/"><img class="button" src="/files/images/buttons/gamerwaves.jpg" alt="88x31 button. Gamer_waves."></a>
     <a href="https://yaoi.tech/"><img class="button" src="/files/images/buttons/alexander.gif" alt="88x31 button. Alex."></a>
+    <a href="https://pianoman0.com/"><img class="button" src="/files/images/buttons/pianoman0.png" alt="88x31 button. Pianoman0. I made this one myself in exchange for stickers. :)"></a>
     <img class="button" src="/files/images/buttons/macaroni.png" alt="88x31 button. Macaroni... NOW! 3.0">
     <img class="button" src="/files/images/buttons/despacito.gif" alt="88x31 button. Despacito... NOW!">
     <img class="button" src="/files/images/buttons/microsoftwindows7.png" alt="88x31 button. Microsoft Windows 7... NOW!">
