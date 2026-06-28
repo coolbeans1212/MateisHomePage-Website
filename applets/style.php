@@ -171,21 +171,7 @@
     font-size: 35px;
     overflow: hidden;
   }
-  input[type="text"] {
-    border: 1px solid;
-    border-radius: 5px;
-    background: #131415;
-    color: #ffffff;
-    height: 25px;
-  }
-  input[type="password"] {
-    border: 1px solid;
-    border-radius: 5px;
-    background: #131415;
-    color: #ffffff;
-    height: 25px;
-  }
-  input[type="email"] {
+  input[type="text"], input[type="password"], input[type="email"], input[type="number"] {
     border: 1px solid;
     border-radius: 5px;
     background: #131415;
@@ -202,6 +188,9 @@
   }
   input[type="submit"], button {
     margin: 5px;
+  }
+  .pinPassword {
+    -webkit-text-security: disc;
   }
   textarea {
     width: 98.1%; /* the magic number */

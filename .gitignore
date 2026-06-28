@@ -11,3 +11,4 @@ photography/
 files/filedump/
 testing/
 vendor/
+.env
