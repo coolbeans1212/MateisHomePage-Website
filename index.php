@@ -87,7 +87,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
       </a>
       <?php endif; ?>
     </div>
-    Welcome to my website! This page was redesigned in December 2024 for it's 1 year anniversary (the website was made 09/12/2023) so that it looked actually good. I tried to make it look like
+    Welcome to my website! This page was redesigned in December 2024 for its 1 year anniversary (the website was made 09/12/2023) so that it looked actually good. I tried to make it look like
     it was from ~2005 because I think websites from that era look super awesome, but I promise I could make a modern website if I tried.
     <h2>A bit about myself & the website.</h2>
     Sometime in late 2023/early 2024, I decided that PHP was awesome and that I should make a website using it. It looked <i>really</i> bad (think 1990s) but it had a lot of functions, like
@@ -175,6 +175,7 @@ if (window.location.href == 'https://eatmoreram.com/') {
     <a href="https://www.dwait.dev/"><img class="button" src="/files/images/buttons/gamerwaves.jpg" alt="88x31 button. Gamer_waves."></a>
     <a href="https://yaoi.tech/"><img class="button" src="/files/images/buttons/alexander.gif" alt="88x31 button. Alex."></a>
     <a href="https://pianoman0.com/"><img class="button" src="/files/images/buttons/pianoman0.png" alt="88x31 button. Pianoman0. I made this one myself in exchange for stickers. :)"></a>
+    <a href="https://thirtyseventh.xyz/"><img class="button" src="/files/images/buttons/thirtyseven.png" alt="88x31 button. Thirtyseven."></a>
     <img class="button" src="/files/images/buttons/macaroni.png" alt="88x31 button. Macaroni... NOW! 3.0">
     <img class="button" src="/files/images/buttons/despacito.gif" alt="88x31 button. Despacito... NOW!">
     <img class="button" src="/files/images/buttons/microsoftwindows7.png" alt="88x31 button. Microsoft Windows 7... NOW!">
