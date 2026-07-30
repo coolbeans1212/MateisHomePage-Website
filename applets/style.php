@@ -23,7 +23,7 @@
     text-align: left;
   }
   .headerOptions {
-    display: -webkit-box;
+    display: flex;
   }
   .headerReactiveText {
     margin: 8px;
