@@ -39,16 +39,16 @@ include_once __DIR__ . "/applets/navigation_bar.php"; // :3
 ?>
 <br>
 <div class="appletContainer">
-  <a href="users.php?offset=<?php if($_GET['offset'] < 6) { echo '0';} else { echo $_GET['offset'] - 6;} ?>&search=<?php echo $_GET['search'] ?>" style="margin-top: auto; margin-bottom: auto;"><button style="margin: 0px;" class="navigationButton">Previous</button></a> <!--stolen from guestbook.php... mwahahaha-->
+  <a href="users.php?offset=<?php if($_GET['offset'] < 6) { echo '0';} else { echo $_GET['offset'] - 6;} ?>&search=<?php echo htmlspecialchars($_GET['search']) ?>" style="margin-top: auto; margin-bottom: auto;"><button style="margin: 0px;" class="navigationButton">Previous</button></a> <!--stolen from guestbook.php... mwahahaha-->
   <div class="mediumApplet" style="text-align: center; margin: auto;">
     <h1>Users</h1>
     <form method="get">
       <label for="search">Search by username:</label><br>
-      <input type="text" id="search" name="search" placeholder="admin" value="<?php echo $_GET['search']; ?>">
+      <input type="text" id="search" name="search" placeholder="admin" value="<?php echo htmlspecialchars($_GET['search']); ?>">
       <input type="submit">
     </form>
   </div>
-  <a href="users.php?offset=<?php echo $_GET['offset'] + 6; ?>&search=<?php echo $_GET['search'] ?>" style="margin-top: auto; margin-bottom: auto;"><button style="margin: 0px;" class="navigationButton">Next</button></a>
+  <a href="users.php?offset=<?php echo $_GET['offset'] + 6; ?>&search=<?php echo htmlspecialchars($_GET['search']) ?>" style="margin-top: auto; margin-bottom: auto;"><button style="margin: 0px;" class="navigationButton">Next</button></a>
 </div>
 <?php //i stole half of this code from guestbook.php and i dont care
 $offset = (int) $_GET['offset']; //integer :P
