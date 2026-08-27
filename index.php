@@ -94,8 +94,8 @@ if (window.location.href == 'https://eatmoreram.com/') {
     a user account system and a guestbook (which are still on the website today!). Because it looked really bad, I started to redesign the website on 07/12/2024 and people thought
     it looked really nice! So, I continued coding and making art until I finished the main page on <b>01/01/2025</b>!
     <br>
-    More about myself. I live in the United Kingdom of Great Britain and Northern Ireland. My favourite operating systems are Microsoft Windows 7 and Arch Linux and my favourite colours
-    are <span style="color: #560dfd">this</span> and <span style="color: #02c46c">this</span>. I am an avid Geometry Dash player (as of 08/12/2024 I have 537 hours on it :O) but I also play
+    More about myself. I live in the United Kingdom of Great Britain and Northern Ireland. My favourite operating systems are Microsoft Windows 7, Kubuntu Linux, and AmigaOS 4.1 FE and my favourite colours
+    are <span style="color: #560dfd">this</span> and <span style="color: #02c46c">this</span>. I am an avid Geometry Dash player (as of 28/08/2026 I have 1628 hours on it :O) but I also play
     Webfishing, Minecraft, and Roblox from time to time.
   </div>
   <br>
