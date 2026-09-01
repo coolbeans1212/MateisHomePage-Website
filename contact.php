@@ -40,11 +40,13 @@ include_once __DIR__ . "/applets/navigation_bar.php"; // :3
 <br>
 <div class="largeApplet">
   <h1>Contact me!</h1>
-  You can contact me for any reason you would like to, just please don't stalk or harass me. The contact methods are listed in order of most preferred to least preferred.<br><hr>
+  You can contact me for any reason you would like to, but don't be mean. The contact methods are listed in order of most preferred to least preferred.<br><hr>
   Discord: @bmpimg<br>
   E-mail: matei@mateishome.page<br>
   Newgrounds: Mattamatt<br>
   Breaking into my server and leaving a note on the desktop: ssh pi@192.168.0.25<br>
+  <hr>
+  Tinfoil hat? <a href="/files/txt/Matei%5Bmatei%40mateishome.page%5D%2826DFDD3029FB44C8%29_pub.asc">Click here to download my PGP public key</a>.
 </div>
 </div>
 </body>
